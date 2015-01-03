@@ -16,7 +16,7 @@
 					<button ng-show="product.canPurchase"> Add to Cart </button>
 				</h3>
 
-				<section ng-init="tab = 1" ng-controller="PanelController as panel">
+				<section ng-controller="PanelController as panel">
 
 					<ul class="nav nav-pills">
 						<li ng-class="{ active: panel.isSelected(1) }"> <a href ng-click="panel.selectTab(1)">Description</a> </li>
