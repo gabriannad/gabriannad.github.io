@@ -5,18 +5,51 @@
 	</head>
 
 	<body ng-controller="StoreController as store">
-	<div class="list-group">
-		<div class="list-group-item" ng-repeat="product in store.products">
-			<h3>
-				{{product.name}}
-				<em class="pull-right">{{product.price | currency}}</em>
-			</h3>
-			<p> {{product.description}} </p>
-			<button ng-show="product.canPurchase"> Add to Cart </button>
+
+		<div class="list-group">
+
+			<div class="list-group-item" ng-repeat="product in store.products">
+
+				<h3>
+					{{product.name}}
+					<em class="pull-right">{{product.price | currency}}</em>
+				</h3>
+				<p> {{product.description}} </p>
+				<button ng-show="product.canPurchase"> Add to Cart </button>
+
+				<section>
+
+					<ul class="nav nav-pills">
+						<li> <a href ng-click="tab = 1">Description</a> </li>
+						<li> <a href ng-click="tab = 2">Specifications</a> </li>
+						<li> <a href ng-click="tab = 3">Reviews</a> </li>
+					</ul>
+
+					<div class="panel" ng-show="tab === 1">
+						<h4>Description</h4>
+						<p>{{product.description}}</p>
+						<blockquote>None yet</blockquote>
+					</div>
+
+					<div class="panel" ng-show="tab === 1">
+						<h4>Specifications</h4>
+						<blockquote>None yet</blockquote>
+					</div>
+
+					<div class="panel" ng-show="tab === 1">
+						<h4>Reviews</h4>
+						<blockquote>None yet</blockquote>
+					</div>
+
+				</section>
+
+			</div>
+
+			<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+			<script type="text/javascript" src="app.js"></script>
+
 		</div>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-	</div>
+
 	</body>
 </html>
