@@ -3,7 +3,7 @@
 		name: 'Dodecahedron',
 		price: 2.95,
 		description: '. . .',
-		canPurchase: false
+		canPurchase: true
 	}
 	var app = angular.module('store', [ ]);
 
