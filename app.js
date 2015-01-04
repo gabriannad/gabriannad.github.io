@@ -5,6 +5,14 @@
 		this.products = gems;
 	});
 
+	app.controller('ReviewController', function(){
+		this.review = {};
+		this.addReview = function(product){
+			product.reviews.push(this.review);
+			this.review = {};
+		}
+	});
+
 	app.controller('PanelController', function(){
 		this.tab = 1;
 		this.selectTab = function(setTab) {
