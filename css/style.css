@@ -1,0 +1,105 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 22px;
+	color: #494949;
+	margin: 0;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 80px;
+	width: 100%;
+	opacity: .95;
+	background-color: #ffffff;
+	border-top: 6px solid #0000FF;
+	border-bottom: 0px solid #eeeeee;
+}
+
+nav #container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 25px;
+}
+
+nav #logo {
+	width: 50px;
+	height: 100%;
+	float: left;
+}
+
+nav ul {
+	margin: 0;
+	float: right;
+	padding: 10px 0 0 0;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: #000000;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+nav ul > li:first-child {
+	margin-left: 0;
+}
+
+main {
+	max-width: 1200px;
+	margin: 100px auto;
+}
+
+
+
+
+div#blurb {
+	margin: 200px 0;
+	text-align: center;
+}
+
+div#blurb h1 {
+	text-transform: uppercase;
+	font-family: "velino-poster";
+	font-weight: 700;
+	font-size: 50px;
+	letter-spacing: 2px;
+	color: #000000;
+}
+
+
+div.project {
+	width: 33%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+}
+
+div.thumb {
+	padding: 10px 10px 0 10px;
+}
+
+div.thumb img {
+	max-width: 100%;
+}
+
+div.description {
+	padding: 15px;
+}
+
+.project h2 {
+	text-transform: uppercase;
+	margin: 0;
+	font-family: 'Roboto Slab';
+	font-weight: bold;
+	font-size: 22px;
+	letter-spacing: 2px;
+	color: #000000;
+}

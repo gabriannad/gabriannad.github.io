@@ -1,79 +1,102 @@
 <!DOCTYPE html>
-<html ng-app="store">
+<html>
 	<head>
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+		<title>Gabrianna Dumaguin</title>
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Didact+Gothic">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Neuton">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+		
+		<script src="//use.typekit.net/psi4lel.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
 	</head>
 
-	<body ng-controller="StoreController as store">
+	<body>
 
-		<div class="list-group">
+		<nav>
 
-			<div class="list-group-item" ng-repeat="product in store.products">
+			<div id="container">
 
-				<h3>
-					{{product.name}}
-					<em class="pull-right">{{product.price | currency}}</em>
-					<button ng-show="product.canPurchase"> Add to Cart </button>
-				</h3>
+				<a href="index.html"><img src="assets/logo.png" id="logo"></a>
 
-				<section ng-controller="PanelController as panel">
-
-					<ul class="nav nav-pills">
-						<li ng-class="{ active: panel.isSelected(1) }"> <a href ng-click="panel.selectTab(1)">Description</a> </li>
-						<li ng-class="{ active: panel.isSelected(2) }"> <a href ng-click="panel.selectTab(2)">Specifications</a> </li>
-						<li ng-class="{ active: panel.isSelected(3) }"> <a href ng-click="panel.selectTab(3)">Reviews</a> </li>
+					<ul>
+						<li>About</li>
+						<li>Work</li>
+						<li>Contact</li>
 					</ul>
 
-					<div class="panel" ng-show="panel.isSelected(1)">
-						<h4>Description</h4>
-						<p>{{product.description}}</p>
-						<blockquote>None yet</blockquote>
-					</div>
-
-					<div class="panel" ng-show="panel.isSelected(2)">
-						<h4>Specifications</h4>
-						<blockquote>None yet</blockquote>
-					</div>
-
-					<div class="panel" ng-show="panel.isSelected(3)">
-
-						<h4>Reviews</h4>
-						<blockquote ng-repeat="review in product.reviews">
-							<b>Stars: {{review.stars}}</b>
-							{{review.body}}
-							<cite>by: {{review.author}}</cite>
-						</blockquote>
-
-						<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
-						<blockquote>
-							<b>Stars: {{reviewCtrl.review.stars}}</b>
-							{{reviewCtrl.review.body}}
-							<cite>by: {{reviewCtrl.review.author}}</cite>
-						</blockquote>
-							<select ng-model="reviewCtrl.review.stars">
-								<option value="1">1 star</option>
-								<option value="2">2 stars</option>
-								<option value="3">3 stars</option>
-								<option value="4">4 stars</option>
-								<option value="5">5 stars</option>
-							</select>
-							<textarea ng-model="reviewCtrl.review.body"></textarea>
-							<label>by:</label>
-							<input ng-model="reviewCtrl.review.author" type="email" />
-							<input type="submit" value="Submit" />
-						</form>
-
-					</div>
-
-				</section>
-
 			</div>
+		</nav>
 
-			<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-			<script type="text/javascript" src="app.js"></script>
+		<main>
+
+		<div id="blurb">
+
+			<h1>Gabrianna Dumaguin</h1>
+			Cal student, wannabe designer, and occasional human being
 
 		</div>
+
+			<div class="project">
+				<div class="thumb">
+					<img src="assets/thumbs/ccm.jpg">
+				</div>
+				<div class="description">
+					<h2>Cal Community Music</h2>
+					<p>Rebranding of Cal Community Music, a group of student volunteers that performs at Berkeley senior homes every weekend</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="thumb">
+					<img src="assets/thumbs/derive.jpg">
+				</div>
+				<div class="description">
+					<h2>Dérive</h2>
+					<p>Interactive protoype for an app that lets you expore your surroundings on your journey from point A to
+	point B</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="thumb">
+					<img src="assets/thumbs/spotter.jpg">
+				</div>
+				<div class="description">
+					<h2>Spotter</h2>
+					<p>A smartphone and smartwatch app that not only allows you to create custom workouts but also guides you through them at the gym</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="thumb">
+					<img src="assets/thumbs/vectors.png">
+				</div>
+				<div class="description">
+					<h2>Illustrations</h2>
+					<p>Vector illustrations of friends</p>
+				</div>
+			</div>
+
+			<div class="project">
+				<div class="thumb">
+					<img src="assets/thumbs/dailycal.png">
+				</div>
+				<div class="description">
+					<h2>The Daily Californian</h2>
+					<p>Work I did for The Daily Californian as an infographic artist</p>
+				</div>
+			</div>
+
+		</main>
 
 	</body>
 </html>
