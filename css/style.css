@@ -1,7 +1,7 @@
 body {
 	font-family: 'nimbus-sans', sans-serif;
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 22px;
 	color: #494949;
 	margin: 0;
@@ -35,6 +35,7 @@ nav ul {
 	margin: 0;
 	float: right;
 	padding: 10px 0 0 0;
+	font-family: 'nimbus-sans';
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 14px;
