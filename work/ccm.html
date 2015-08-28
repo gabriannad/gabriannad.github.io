@@ -14,6 +14,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
+			div#titlebg {
+				background-color: #000000;
+				width: 100%;
+				height: 600px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+
 			nav ul {
 				color: #ffffff;
 			}
@@ -26,72 +36,159 @@
 			nav {
 				border: none;
 			}
+
+			main, main p {
+				font-size: 18px;
+				color: #111111;
+				line-height: 30px;
+			}
+
+			main p {
+				margin-bottom: 0;
+			}
+
+			h2 {
+				font-family: "league_spartanregular";
+				font-weight: normal;
+				font-size: 25px;
+				text-transform: uppercase;
+				line-height: 30px;
+				margin: 0;
+			}
+
+			#proj-title {
+				width: 500px;
+				margin: 200px 0 67px 0;
+				color: #ffffff;
+				font-size: 27px;
+			}
+
+			#proj-title h1 {
+				font-family: "league_spartanregular";
+				font-weight: normal;
+				font-size: 70px;
+				text-transform: uppercase;
+				line-height: 88px;
+			}
+
+			#overview {
+				margin-right: 210px;
+			}
+
+			#tools {
+				width: 210px;
+				float: right;
+			}
+
+			#ccm-logo-container {
+				width: 100%;
+				margin-top: 50px;
+			}
+
+			#ccm-logo {
+				vertical-align: bottom;
+				display: inline-block;
+				width: 415px;
+				height: 383px;
+				background-image: url('../assets/ccm/logo.png');
+				background-size: 100% 100%;
+				margin-right: 50px;
+			}
+
+			#ccm-logo-desc {
+				vertical-align: bottom;
+				display: inline-block;
+				width: 500px;
+			}
+
+			#ccm-webpage1-container {
+				width: 100%;
+				margin-top: 100px;
+			}
+
+			#ccm-webpage1 {
+				vertical-align: bottom;
+				display: inline-block;
+				width: 676px;
+				height: 400px;
+				background-image: url('../assets/ccm/webpage1.png');
+				background-size: 100% 100%;
+				margin-left: 50px;
+			}
+
+			#ccm-webpage1-desc {
+				vertical-align: bottom;
+				display: inline-block;
+				width: 250px;
+			}
+
+			#ccm-webpage2-container {
+				width: 100%;
+				margin-top: 100px;
+			}
+
+			#ccm-webpage2 {
+				vertical-align: bottom;
+				display: inline-block;
+				margin-right: 50px;
+			}
+
+			#ccm-webpage2-mobile {
+				vertical-align: bottom;
+				display: inline-block;
+			}
+
+			#ccm-webpage2-container p {
+				margin-top: 40px;
+			}
 		</style>
 
 	</head>
 
 	<body>
 
+		<div id="titlebg"></div>
+
 		<nav ng-include="'../nav.html'"></nav>
 
 		<main>
 
-		<div id="blurb">
+			<div id="proj-title">
 
-			<h1>Cal Community Music</h1>
-			Branding, Web Design
+				<h1>Cal Community Music</h1>
+				Branding, Web Design
 
-		</div>
-
-			<div class="project">
-				<div class="thumb">
-					<img src="../assets/thumbs/ccm.jpg">
-				</div>
-				<div class="description">
-					<h2>Cal Community Music</h2>
-					<p>Rebranding of Cal Community Music, a group of student volunteers that performs at Berkeley senior homes every weekend</p>
-				</div>
 			</div>
 
-			<div class="project">
-				<div class="thumb">
-					<img src="../assets/thumbs/derive.jpg">
-				</div>
-				<div class="description">
-					<h2>Dérive</h2>
-					<p>Interactive protoype for an app that lets you expore your surroundings on your journey from point A to
-	point B</p>
-				</div>
+			<div id="tools">
+				<h2>Tools Used</h2>
+				<ul>
+					<li>Illustrator</li>
+					<li>HTML + CSS</li>
+					<li>Javascript + jQuery</li>
+					<li>Angular.js</li>
+				</ul>
 			</div>
 
-			<div class="project">
-				<div class="thumb">
-					<img src="../assets/thumbs/spotter.jpg">
-				</div>
-				<div class="description">
-					<h2>Spotter</h2>
-					<p>A smartphone and smartwatch app that not only allows you to create custom workouts but also guides you through them at the gym</p>
-				</div>
+			<div id="overview">
+				<h2>Overview</h2>
+				<p>Cal Community Music is a group of student and alumni musicians dedicated to serving the Berkeley senior community through music, performing at various nursing homes in Berkeley as well as hosting jam sessions and social events to provide a platform for musicians to meet and collaborate. As a coordinator of Cal Community Music, I took it upon myself to give the club a new look as part of a larger effort to attract more members. </p>
 			</div>
 
-			<div class="project">
-				<div class="thumb">
-					<img src="../assets/thumbs/vectors.png">
-				</div>
-				<div class="description">
-					<h2>Illustrations</h2>
-					<p>Vector illustrations of friends</p>
-				</div>
+			<div id="ccm-logo-container">
+				<div id="ccm-logo"></div>
+				<div id="ccm-logo-desc"><p>Since CCM had no exisiting logo or brand, I was essentially starting with a blank slate. I began with creating a logo to unify the club under one iconic image, which was inspired by Igor Garybaldi’s logo for Music Town. I put my own Berkeley spin on it by playing with negative space to depict UC Berkeley’s Campanile in order to distinguish the club as a Cal organization.</p></div>
 			</div>
 
-			<div class="project">
-				<div class="thumb">
-					<img src="../assets/thumbs/dailycal.png">
-				</div>
-				<div class="description">
-					<h2>The Daily Californian</h2>
-					<p>Work I did for The Daily Californian as an infographic artist</p>
-				</div>
+			<div id="ccm-webpage1-container">
+				<div id="ccm-webpage1-desc"><p>Next, I decided to put my web design skills to practice by designing and building a new website for CCM. Since the website would play a key role in getting students to join our club, I made use of some photos we had in order to visually give our audience a clearer idea of what the club does and how it operates the very first time they visit our website.</p></div>
+				<div id="ccm-webpage1"></div>
+			</div>
+
+			<div id="ccm-webpage2-container">
+				<center><img id="ccm-webpage2" src="../assets/ccm/webpage2.png">
+				<img id="ccm-webpage2-mobile" src="../assets/ccm/webpage2-mobile.png"></center>
+				<p>Since the club’s main activity is performing at local senior homes and hosting jam sessions before the performances, I wanted to make sure that the event schedule was a highlighted feature of the website and could be easily viewed on a mobile device for a member to quickly check the website for where the next concert is scheduled to be. On the desktop view of the website, members can also see a map of all of our event locations. Just for practice, I used Angular.js to read the event information from a JSON file and render it onto the event page.</p>
 			</div>
 
 		</main>
