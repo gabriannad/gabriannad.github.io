@@ -32,7 +32,7 @@ nav {
 }
 
 nav #container {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 20px 25px;
 }
@@ -65,7 +65,7 @@ nav ul > li:first-child {
 }
 
 main {
-	max-width: 1200px;
+	max-width: 1000px;
 	margin: 100px auto;
 }
 
