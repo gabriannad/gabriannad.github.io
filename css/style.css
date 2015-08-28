@@ -11,9 +11,9 @@
 }
 
 body {
-	font-family: 'EB Garamond', sans-serif;
+	font-family: 'EB Garamond', serif;
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 16px;
 	line-height: 22px;
 	color: #494949;
 	margin: 0;
@@ -29,7 +29,7 @@ nav {
 	background-color: #ffffff;
 	border-top: 6px solid #0000FF;
 	border-bottom: 0px solid #eeeeee;
-}gi
+}
 
 nav #container {
 	max-width: 1000px;
