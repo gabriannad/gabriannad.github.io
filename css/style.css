@@ -61,12 +61,20 @@ nav ul > li:first-child {
 	margin-left: 0;
 }
 
+nav a:link, nav a:visited {
+	color: auto;
+	text-decoration: none;
+}
+
+nav a:hover {
+	opacity: .7;
+}
+
 main {
 	max-width: 1000px;
 	margin: 100px auto;
+	padding: 0 75px;
 }
-
-
 
 
 div#blurb {
