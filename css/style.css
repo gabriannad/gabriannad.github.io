@@ -25,8 +25,6 @@ nav {
 	left: 0;
 	height: 80px;
 	width: 100%;
-	opacity: .95;
-	background-color: #ffffff;
 	border-top: 6px solid #0000FF;
 	border-bottom: 0px solid #eeeeee;
 }
@@ -108,7 +106,8 @@ div.description {
 	text-transform: uppercase;
 	margin: 0;
 	font-family: 'league_spartanregular';
-	font-size: 22px;
+	font-size: 19px;
 	letter-spacing: 2px;
+	line-height: 30px;
 	color: #000000;
 }
