@@ -14,16 +14,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			div#blurb {
-				margin: 200px 0 150px 0;
+			#titlebg {
+				background-color: #3A11D1;
+				width: 100%;
+				height: 450px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+
+			#blurb {
+				margin: 175 0 100px 0;
 				text-align: center;
 			}
 
-			div#blurb h1 {
+			#blurb h1 {
 				font-family: "league_spartanregular";
 				font-weight: normal;
-				font-size: 50px;
+				font-size: 35px;
 				color: #000000;
+				text-transform: uppercase;
 			}
 
 
@@ -72,6 +83,8 @@
 	</head>
 
 	<body>
+
+		<div id="titlebg"></div>
 
 		<nav ng-include="'/nav.html'"></nav>
 
