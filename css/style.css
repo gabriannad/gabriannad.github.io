@@ -37,6 +37,7 @@ nav #container {
 nav #logo {
 	width: 50px;
 	height: 100%;
+	background-image: url('/assets/logo-black.png');
 	float: left;
 }
 
@@ -74,51 +75,4 @@ main {
 	max-width: 1000px;
 	margin: 100px auto;
 	padding: 0 75px;
-}
-
-
-div#blurb {
-	margin: 200px 0 150px 0;
-	text-align: center;
-}
-
-div#blurb h1 {
-	font-family: "league_spartanregular";
-	font-weight: normal;
-	font-size: 50px;
-	color: #000000;
-}
-
-
-div.project {
-	width: 33%;
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-}
-
-div.thumb {
-	padding: 10px 10px 0 10px;
-}
-
-div.thumb img {
-	max-width: 100%;
-}
-
-div.description {
-	padding: 15px;
-}
-
-.project h2 {
-	text-transform: uppercase;
-	margin: 0;
-	font-family: 'league_spartanregular';
-	font-size: 19px;
-	letter-spacing: 2px;
-	line-height: 30px;
-	color: #000000;
-}
-
-a:link .project, a:visited .project {
-	color: #494949;
 }
