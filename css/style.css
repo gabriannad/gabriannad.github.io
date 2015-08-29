@@ -118,3 +118,7 @@ div.description {
 	line-height: 30px;
 	color: #000000;
 }
+
+a:link .project, a:visited .project {
+	color: #494949;
+}
