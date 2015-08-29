@@ -42,6 +42,7 @@ nav #logo {
 	width: 50px;
 	height: 39px;
 	background-image: url('/assets/logo-black.png');
+	background-size: 100% 100%;
 	float: left;
 }
 
