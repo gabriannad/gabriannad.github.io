@@ -96,6 +96,11 @@ main p {
 	margin-bottom: 0;
 }
 
+main a:link, main a:visited {
+	font-weight: bold;
+	color: inherit;
+}
+
 h2 {
 	font-family: "league_spartanregular";
 	font-weight: normal;
