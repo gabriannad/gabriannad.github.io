@@ -129,3 +129,8 @@ h2 {
 ul li {
 	line-height: 30px;
 }
+
+#overview {
+	margin-right: 210px;
+	padding-right: 40px;
+}
