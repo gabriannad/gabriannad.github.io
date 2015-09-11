@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+	<head>
+
+		<title>Gabrianna Dumaguin</title>
+		<link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+		<script src="//use.typekit.net/psi4lel.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<style type="text/css">
+			#titlebg {
+				background-color: #191919;
+			}
+
+			h1 {
+				color: #FFE30E;
+			}
+
+			#tools {
+				width: 210px;
+				float: right;
+			}
+
+			.row-container {
+				width: 100%;
+				height: auto;
+				margin-top: 50px;
+			}
+
+			.cell {
+				display: inline-block;
+				width: 25%;
+				padding: 20px;
+				text-align: center;
+				vertical-align: top;
+			}
+
+			.cell img {
+				width: 80%;
+				padding-bottom: 10px;
+			}
+
+			.row-container ul li {
+				padding-bottom: 10px;
+			}
+
+			main a:link, main a:visited {
+				color: #A8A8A8;
+			}
+
+			main a:hover {
+				color: #E61E25;
+			}
+
+			.phone-screen {
+				width: 200px;
+				display: inline;
+				margin-bottom: 6%;
+			}
+
+			.watch-screen {
+				width: 190px;
+				display: inline;
+				margin-bottom: 19.5%;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div id="titlebg"></div>
+
+		<nav ng-include="'../nav.html'"></nav>
+
+		<main>
+
+			<div id="proj-title">
+
+				<h1 style="color: #FFE30E">Spotter</h1>
+				Mobile UI/UX Design, Design Research, Lo/Hi-fidelity Prototyping
+
+			</div>
+
+			<div id="tools">
+				<h2 style="color: #FAAE1B">Tools Used</h2>
+				<ul>
+					<li>Paper prototyping</li>
+					<li>Iterative design</li>
+					<li>Illustrator</li>
+				</ul>
+			</div>
+
+			<div id="overview">
+				<h2 style="color: #E61E25">Overview</h2>
+				<p>As a student of the <a href="http://teaching.paulos.net/cs160_FL2014/" target="_blank">user interface class</a> I took at UC Berkeley in the fall of 2014, I worked on a team of five to ideate, research, design, and prototype a phone and smartwatch application for our final class project. Our application, Spotter, is a weight lifter’s end-to-end workout companion. It utilizes the mobile and smart watch form factors for a seamless experience through all three stages of a weight lifter’s workout. Users can create and manage their routines before hitting the gym, receive step-by-step guidance through a workout, and are able to look over detailed personal analytics afterwards to improve. The smart-watch integration allows users to receive granular feedback on their workouts like vibrations for each rep and velocity and power measurements using the accelerometer. Spotter manages your workouts so that you can put all of your effort into what matters most: getting big!</p>
+			</div>
+
+			<center>
+				<div class="row-container">
+					<img src="../assets/spotter/Spotter-phone-01.png" class="phone-screen" style="padding-right: 25px;">
+					<img src="../assets/spotter/Spotter-phone-02.png" class="phone-screen">
+					<img src="../assets/spotter/Spotter-phone-03.png" style="width: 285px;">
+					<img src="../assets/spotter/Spotter-phone-04.png" class="phone-screen">
+				</div>
+			</center>
+
+			<div class="row-container">
+				<p>The five of us worked together to create the basic workflow of the phone application. As the one member on our team with visual design and Illustrator experience, however, I ended up designing the screens of the final prototype.</p>
+			</div>
+
+			<center>
+				<div class="row-container">
+					<img src="../assets/spotter/Spotter-watch-01.png" class="watch-screen">
+					<img src="../assets/spotter/Spotter-watch-02.png" style="width: 270px; padding: 0 20px;">
+					<img src="../assets/spotter/Spotter-watch-03.png" class="watch-screen" style="padding-right: 25px;">
+					<img src="../assets/spotter/Spotter-watch-04.png" class="watch-screen">
+				</div>
+			</center>
+
+			<div class="row-container" style="margin-top: 0">
+				<p>Qualcomm was generous enough to supply each of us with a Qualcomm Toq smartwatch! Our project required that we design our smartwatch applet for <a href="https://toq.qualcomm.com/" target="_blank">the Toq</a>, which has limited UI capabilities. I tried my best to make due with the watch UI, keeping the design consistent with the Toq’s deck-of-cards interface.</p>
+				<center><p><a href="../assets/spotter/Spotter-report.pdf" target="_blank">Read more about our entire design process here!</a></p></center>
+			</div>
+		</main>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+
+	</body>
+</html>

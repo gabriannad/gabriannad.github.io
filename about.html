@@ -14,13 +14,14 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#titlebg {
+
+			body {
 				background-color: #312287;
-				height: 8px;
+				color: #ffffff;
 			}
 
 			h2 {
-				color: #312287;
+				color: #ffffff;
 			}
 
 			.row-container {
@@ -47,34 +48,39 @@
 			}
 
 			main a:link, main a:visited {
-				color: #312287;
+				color: #9090E0;
 			}
 
 			main a:hover {
-				color: #4C4AA8;
+				color: #7070C1;
 			}
 
 			#overview {
-				margin: 235px 0 0 0;
-				padding: 0;
-				width: 100%;
+				padding: 0 0 100px 0;
+				max-width: 1000px;
+				position: absolute;
+				bottom: 0;
+				margin: 0;
+				width: auto;
 			}
 
-			nav ul {
-				color: #312287;
+			.logo-link img {
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+				display: inline;
+				border: none;
 			}
 
-			#logo {
-				-webkit-filter: brightness(.2) saturate(1) hue-rotate(248deg);
-				filter: brightness(.2) saturate(1) hue-rotate(248deg);
+			.logo-link img:hover {
+				opacity: .7;
 			}
+
 		</style>
 
 	</head>
 
 	<body>
-
-		<div id="titlebg"></div>
 
 		<nav ng-include="'../nav.html'"></nav>
 
@@ -84,7 +90,10 @@
 				<img src="assets/me.jpg" style="width: 300px; height: 300px; border-radius: 50%; margin: 0 50px 0 0; float: left;">
 				<div>
 					<h2>About Me</h2>
-					<p>I am a UX designer with a programming background (or a programmer with a design background—I still haven't figured that one out...). I'm currently working towards getting my Bachelor's degree in Computer Science at UC Berkeley, but in between the endless CS projects and weekly problem sets, I dedicate the rest of my time to being an officer of <a href="http://innovativedesign.club" target="_blank">Innovative Design</a>, a design service club at Cal. During my time at Innovative Design, I've taught a class of Berkeley students the fundamentals of Photoshop & Illustrator, led a few teams of graphic designers, and, most importantly, learned that design doesn't have to just be my hobby; it can be my career, too!</p>
+					<p style="margin-bottom: 20px">I'm a UX designer with a programming background currently working towards getting her B.A. in Computer Science at UC Berkeley. In between problem sets & CS projects, I dedicate the rest of my time to being an officer of <a href="http://innovativedesign.club" target="_blank">Innovative Design</a>, a design service club at Cal. During my time at Innovative Design, I've taught a class of Berkeley students the fundamentals of Photoshop & Illustrator, led a few teams of graphic designers, and, most importantly, learned that design doesn't have to just be my hobby; it can be my career, too!</p>
+					<a class="logo-link" href="https://www.linkedin.com/pub/gabrianna-dumaguin/79/b3a/268" target="_blank"><img src="assets/linkedin-logo.png"></a>
+					<a class="logo-link" href="https://behance.net/gabrianna" target="_blank"><img src="assets/behance-logo.png"></a>
+					<a class="logo-link" href="https://github.com/gabriannad" target="_blank"><img src="assets/github-logo.png"></a>
 				</div>
 			</div>
 
