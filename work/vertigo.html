@@ -22,32 +22,6 @@
 				color: #E5BE1C;
 			}
 
-			#tools {
-				width: 210px;
-				float: right;
-			}
-
-			.row-container {
-				width: 100%;
-				height: auto;
-				margin-top: 50px;
-			}
-
-			.cell {
-				display: inline-block;
-				width: auto;
-				text-align: center;
-				vertical-align: top;
-			}
-
-			.cell img {
-				padding-bottom: 10px;
-			}
-
-			.row-container ul li {
-				padding-bottom: 10px;
-			}
-
 			main a:link, main a:visited {
 				color: #BFA122;
 			}
@@ -142,7 +116,7 @@
 			</div>
 
 			<div class="row-container">
-				<h2>Higher Fidelity Mockups</h2>
+				<h2>Mid-Fidelity Mockups</h2>
 				<p>The feedback we got from Ian on our Balsamiq prototype was generally positive! Our solution for merge conflicts, however, still needed some work. He stressed that having a tool to help designers resolve merge conflicts easily and efficiently without having to open it up in the design program would really make the process less painful for designers. So we resurrected my idea for letting the user pick and choose the attributes of the layers that conflicted between the two versions using our web application. Instead of having the user select individual <i>attributes</i> of a layer, however, we decided that selecting an entire layer (or ‘object’ in Illustrator terms) would be less tedious. So for our next iteration of higher fidelity mockups, we translated our Balsamiq sketches to Illustrator mockups using a simple style guide that Ji-hern drafted up, and I came up with this solution for resolving merge conflicts:</p>
 			</div>
 
@@ -158,9 +132,35 @@
 			</div>
 
 			<div class="row-container">
+				<h2>Higher Fidelity Mockups</h2>
+				<p>The next week our team worked on moving our designs up in fidelity so we could present our work to some more folks at Vertigo, including Creative Developer Cheryl MacDonald, Visual Designer Liliya Kriulina (a former DeCal student of mine!), and Creative Developer Sydnee Stanley.  At this point everyone on the team had pretty much already consolidated who was in charge of which screens, so I continued developing the merge conflict page as well as the page for a single file revision that shows a side-by-side comparison two successive revisions of a file and the page on which the user enters a comment (equivalent to a Git commit message) on each of the new revisions being uploaded.</p>
+
+				<div style="width: 600px; margin: 50px auto 0 auto">
+					<img src="../assets/vertigo/commitmessages_v02.png" style="width: 100%; margin-bottom: 10px"><br>
+					<p class="caption">After the user uploads any number of files, he is prompted to write a comment for each revision.</p>
+				</div>
+
+				<div style="width: 600px; margin: 50px auto 0 auto">
+					<img src="../assets/vertigo/filerevision_v02.png" style="width: 100%; margin-bottom: 10px"><br>
+					<p class="caption">The page for a single file revision shows a side-by-side comparison of the revision and the revision that preceded it.</p>
+				</div>
+
+				<div style="width: 600px; margin: 50px auto 0 auto">
+					<img src="../assets/vertigo/mergeconflict_v02.png" style="width: 100%; margin-bottom: 10px"><br>
+					<p class="caption">Merge conflict page; the user selects which version of the layers should be kept in the file. A live preview of what the file would look like with the selected layers is shown to the user. If the conflict can’t be solved entirely with this tool, the user has the ability to download the file with the changes that have been made so far, make the necessary edits in the respective design software, and upload it as the new resolved revision.</p>
+				</div>
+
+				<p style="margin-top: 30px">From this point on, Ian wanted us to use our remaining four weeks to finalize the visual design of our app, so for the next week I worked on further developing the merge conflict page (see above). Sydnee pointed out that the ability to resolve the conflict manually by downloading the file, making the changes in the design software, and reuploading the new revision was unclear since the download button and upload buttons were nowhere near each other and thus had no clear indication that you would follow those steps in that order. So I played around with the interface, initially trying to arrange the buttons in a way that would be more indicative to the order of each subtask. But I could not, for the life of me, get this to work with the current layout I was working with! So rather than being stuck staring at the same screen, I played around the interface and eventually came up with something I liked a lot better:</p>
+
+				<center><img src="../assets/vertigo/mergeconflict_v03.png" style="width: 80%; margin: 50px 0 30px 0"></center>
+
+				<p>I changed the new merge conflict page to make the content look less static and more like an interactive tool, adding zoom in/out functionality so that the user may inspect any smaller changes in the file. I also moved the list of layers to be adjacent to the file preview and made it scrollable so that the user will always see the affected changes of selecting a layer rather than having to scroll up and down the page to preview the new version of the file he is trying to consolidate. I also changed the "Download" button to explicitly say "Open in Illustrator" (or Sketch/Photoshop/etc.) depending on the type of file). This gives the user a better indication of why he would need to download the file in the first place. Because of this hint, I decided that it was okay to leave the button overlayed in the corner of the image preview; while the words on the button implicitly explain what to do with file, the placement of the button over the image suggests <i>what</i> the user is downloading (the previewed version that is shown).</p>
+			</div>
+
+			<div class="row-container">
 				<center>
-				Come back next week for more updates on our project!<br>
-				(Last updated on November 4th, 2015)
+				<p>Come back next week for more updates on our project!<br>
+				(Last updated on November 18th, 2015)</p>
 				</center>
 			</div>
 
