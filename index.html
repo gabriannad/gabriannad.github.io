@@ -19,6 +19,10 @@
 				background-size: 174px 179px;
 			}
 
+			main {
+				margin-bottom: 15px;
+			}
+
 			div.thumb {
 				padding: 10px 10px 0 10px;
 			}
@@ -37,6 +41,8 @@
 				text-align: center;
 				vertical-align: top;
 				margin-bottom: 40px;
+			    -webkit-transition: opacity .3s;
+			    transition: opacity .3s;
 			}
 
 			.project .description p {
@@ -66,6 +72,10 @@
 
 			.description p {
 				margin-top: 0;
+			}
+
+			footer {
+				background-color: #908F99;
 			}
 		</style>
 
@@ -159,6 +169,8 @@
 		</a>
 
 		</main>
+
+		<footer ng-include="'/footer.html'"></footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
 
