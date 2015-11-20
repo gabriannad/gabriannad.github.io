@@ -208,6 +208,15 @@ footer #container {
 	color: #ffffff;
 }
 
+footer a:link, footer a:visited {
+	border-bottom: 1px solid;
+	color: #ffffff;
+}
+
+footer a:hover {
+	color: #dddddd;
+}
+
 a:link.logo-link, a:visited.logo-link {
 	border: none;
 }
