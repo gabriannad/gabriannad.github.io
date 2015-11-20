@@ -29,6 +29,10 @@
 			main a:hover {
 				color: #917A1C;
 			}
+
+			p.caption {
+				text-align: left;
+			}
 		</style>
 
 	</head>
@@ -58,7 +62,7 @@
 
 			<div id="overview">
 				<h2>Overview</h2>
-				<p>As a member of Berkeley Innovation, a human-centered design club at UC Berkeley, I’m currently working with three other students on a project with <a href="https://www.vertigo.com/">Vertigo Software</a> (recently acquired by <a href="http://mlb.mlb.com/home">MLB</a>). We were essentially assigned to design and prototype <a href="https://git-scm.com/">Git</a> for designers. A list of Git-equivalent features, including branching and the ability to resolve merge conflicts, were given to us, but the design and function of the application was largely up to us.</p>
+				<p>As a member of Berkeley Innovation, a human-centered design club at UC Berkeley, I’m currently working with three other students on a project with <a href="https://www.vertigo.com/">Vertigo Software</a> (recently acquired by <a href="http://mlb.mlb.com/home">MLB</a>). We were essentially assigned to design and prototype <a href="https://Git-scm.com/">Git</a> for designers. A list of Git-equivalent features, including branching and the ability to resolve merge conflicts, were given to us, but the design and function of the application was largely up to us.</p>
 			</div>
 
 			<div class="row-container">
@@ -85,21 +89,36 @@
 
 			<div class="row-container">
 				<center>
-					<div class="cell">
-						<img src="../assets/vertigo/papersketch1.jpg" style="height: 400px">
+					<div class="cell" style="width: 30%; margin: 1%">
+						<img src="../assets/vertigo/papersketch1.jpg" style="width: 100%"><br>
+						<p class="caption" style="text-align: center">Screens sketched by Ji-hern</p>
+						<p class="caption">
+							(1) The feed informs the user of updates to all the projects he's involved in<br>
+							(2) The projects view lists all the projects of which he's a collaborator
+						</p>
 					</div>
-					<div class="cell" style="padding: 0 40px">
-						<img src="../assets/vertigo/papersketch2.jpg" style="height: 400px">
+					<div class="cell" style="width: 30%; margin: 1%">
+						<img src="../assets/vertigo/papersketch2.jpg" style="width: 100%"><br>
+						<p class="caption" style="text-align: center">Screens sketched by Nickki</p>
+						<p class="caption">
+							(3) The files view lists the files in a project or a folder within a project<br>
+							(3a) Actions like downloading, deleting, or merging a file can be revealed by hover over its thumbnail
+						</p>
 					</div>
-					<div class="cell">
-						<img src="../assets/vertigo/papersketch3.jpg" style="height: 400px">
+					<div class="cell" style="width: 30%; margin: 1%">
+						<img src="../assets/vertigo/papersketch3.jpg" style="width: 100%"><br>
+						<p class="caption" style="text-align: center">Screens sketched by me</p>
+						<p class="caption">
+							(4) A single file's revision history is represented by a timeline<br>
+							(5) A single file revision page shows a comparison between the revision and the previous version
+						</p>
 					</div>
 				</center>
 			</div>
 
 			<div class="row-container">
 				<h2>Wireframing with Balsamiq</h2>
-				<p>For week three, Ian wanted some higher (but still low) fidelity mockups, so we each drafted up our screen sketches in Balsamiq.  This allowed us to really hash out the workflow of our application as well as discover any holes in the workflow. We also made some new decisions about which features would be included in the product. One of these features was the eqivalent of branches in git, which was one of the features that Ian had wanted us to implement in our application. We decided against including branches in our applcation, concluding that it’s unlikely that designers would need a separate set of <i>all</i> the files, especially if they wanted to experiment on just one file.</p>
+				<p>For week three, Ian wanted some higher (but still low) fidelity mockups, so we each drafted up our screen sketches in Balsamiq.  This allowed us to really hash out the workflow of our application as well as discover any holes in the workflow. We also made some new decisions about which features would be included in the product. One of these features was the eqivalent of branches in Git, which was one of the features that Ian had wanted us to implement in our application. We decided against including branches in our applcation, concluding that it’s unlikely that designers would need a separate set of <i>all</i> the files, especially if they wanted to experiment on just one file.</p>
 			</div>
 
 			<div class="row-container">
@@ -135,17 +154,17 @@
 				<h2>Higher Fidelity Mockups</h2>
 				<p>The next week our team worked on moving our designs up in fidelity so we could present our work to some more folks at Vertigo, including Creative Developer Cheryl MacDonald, Visual Designer Liliya Kriulina (a former DeCal student of mine!), and Creative Developer Sydnee Stanley.  At this point everyone on the team had pretty much already consolidated who was in charge of which screens, so I continued developing the merge conflict page as well as the page for a single file revision that shows a side-by-side comparison two successive revisions of a file and the page on which the user enters a comment (equivalent to a Git commit message) on each of the new revisions being uploaded.</p>
 
-				<div style="width: 600px; margin: 50px auto 0 auto">
+				<div style="width: 80%; margin: 50px auto 0 auto">
 					<img src="../assets/vertigo/commitmessages_v02.png" style="width: 100%; margin-bottom: 10px"><br>
 					<p class="caption">After the user uploads any number of files, he is prompted to write a comment for each revision.</p>
 				</div>
 
-				<div style="width: 600px; margin: 50px auto 0 auto">
+				<div style="width: 80%; margin: 50px auto 0 auto">
 					<img src="../assets/vertigo/filerevision_v02.png" style="width: 100%; margin-bottom: 10px"><br>
 					<p class="caption">The page for a single file revision shows a side-by-side comparison of the revision and the revision that preceded it.</p>
 				</div>
 
-				<div style="width: 600px; margin: 50px auto 0 auto">
+				<div style="width: 80%; margin: 50px auto 0 auto">
 					<img src="../assets/vertigo/mergeconflict_v02.png" style="width: 100%; margin-bottom: 10px"><br>
 					<p class="caption">Merge conflict page; the user selects which version of the layers should be kept in the file. A live preview of what the file would look like with the selected layers is shown to the user. If the conflict can’t be solved entirely with this tool, the user has the ability to download the file with the changes that have been made so far, make the necessary edits in the respective design software, and upload it as the new resolved revision.</p>
 				</div>
@@ -154,7 +173,7 @@
 
 				<center><img src="../assets/vertigo/mergeconflict_v03.png" style="width: 80%; margin: 50px 0 30px 0"></center>
 
-				<p>I changed the new merge conflict page to make the content look less static and more like an interactive tool, adding zoom in/out functionality so that the user may inspect any smaller changes in the file. I also moved the list of layers to be adjacent to the file preview and made it scrollable so that the user will always see the affected changes of selecting a layer rather than having to scroll up and down the page to preview the new version of the file he is trying to consolidate. I also changed the "Download" button to explicitly say "Open in Illustrator" (or Sketch/Photoshop/etc.) depending on the type of file). This gives the user a better indication of why he would need to download the file in the first place. Because of this hint, I decided that it was okay to leave the button overlayed in the corner of the image preview; while the words on the button implicitly explain what to do with file, the placement of the button over the image suggests <i>what</i> the user is downloading (the previewed version that is shown).</p>
+				<p>I changed the new merge conflict page to make the content look less static and more like an interactive tool, adding zoom in/out functionality so that the user may inspect any smaller changes in the file. I also moved the list of layers to be adjacent to the file preview and made it scrollable so that the user will always see the affected changes of selecting a layer rather than having to scroll up and down the page to preview the new version of the file he is trying to consolidate. I also changed the "Download" button to explicitly say "Open in Illustrator" (or Sketch/Photoshop/etc. depending on the type of file). This gives the user a better indication of why he would need to download the file in the first place. Because of this hint, I decided that it was okay to leave the button overlayed in the corner of the image preview; the placement of the button over the image suggests <i>what</i> the user is downloading (the previewed version that is shown) while the words on the button implicitly explain <i>what to do</i> with the file.</p>
 			</div>
 
 			<div class="row-container">
