@@ -14,61 +14,44 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#titlebg {
+			#proj-title, footer {
 				background-color: #111111;
 			}
 
-			#ccm-logo-container {
-				width: 100%;
-				margin-top: 50px;
+			h2 {
+				color: #111111;
 			}
 
 			#ccm-logo {
 				vertical-align: bottom;
 				display: inline-block;
-				width: 415px;
-				height: 383px;
-				background-image: url('../assets/ccm/logo.png');
-				background-size: 100% 100%;
-				margin-right: 50px;
+				margin-right: 5%;
+				width: 40%;
 			}
 
 			#ccm-logo-desc {
 				vertical-align: bottom;
 				display: inline-block;
-				width: 500px;
-			}
-
-			#ccm-webpage1-container {
-				width: 100%;
-				margin-top: 100px;
+				width: 50%;
 			}
 
 			#ccm-webpage1 {
 				vertical-align: bottom;
 				display: inline-block;
-				width: 676px;
-				height: 400px;
-				background-image: url('../assets/ccm/webpage1.png');
-				background-size: 100% 100%;
-				margin-left: 50px;
+				margin-left: 5%;
+				width: 67%;
 			}
 
 			#ccm-webpage1-desc {
 				vertical-align: bottom;
 				display: inline-block;
-				width: 250px;
-			}
-
-			#ccm-webpage2-container {
-				width: 100%;
-				margin-top: 100px;
+				width: 27%;
 			}
 
 			#ccm-webpage2 {
 				vertical-align: bottom;
 				display: inline-block;
-				margin-right: 50px;
+				margin-right: 3%;
 			}
 
 			#ccm-webpage2-mobile {
@@ -93,48 +76,56 @@
 
 	<body>
 
-		<div id="titlebg"></div>
-
 		<nav ng-include="'../nav.html'"></nav>
 
 		<main>
 
-			<div id="proj-title">
+			<div id="proj-title" class="content-row">
 
-				<h1>Cal Community Music</h1>
-				Branding, Web Design
+				<div id="proj-title-text">
+					<h1>Cal Community Music</h1>
+					Branding, Web Design
+				</div>
 
 			</div>
 
-			<div id="tools">
-				<h2>Tools Used</h2>
-				<ul>
-					<li>Illustrator</li>
-					<li>HTML + CSS</li>
-					<li>Javascript + jQuery</li>
-					<li>Angular.js</li>
-				</ul>
+			<div class="content-row">
+
+				<div id="tools">
+					<ul>
+						<li>Illustrator</li>
+						<li>HTML + CSS</li>
+						<li>Javascript + jQuery</li>
+						<li>Angular.js</li>
+					</ul>
+				</div>
+
+				<div id="overview">
+					<h2>Overview</h2>
+					<p>Cal Community Music is a group of student and alumni musicians dedicated to serving the Berkeley senior community through music, performing at various nursing homes in Berkeley as well as hosting jam sessions and social events to provide a platform for musicians to meet and collaborate. As a coordinator of Cal Community Music, I took it upon myself to give the club a new look as part of a larger effort to attract more members. </p>
+				</div>
+
 			</div>
 
-			<div id="overview">
-				<h2>Overview</h2>
-				<p>Cal Community Music is a group of student and alumni musicians dedicated to serving the Berkeley senior community through music, performing at various nursing homes in Berkeley as well as hosting jam sessions and social events to provide a platform for musicians to meet and collaborate. As a coordinator of Cal Community Music, I took it upon myself to give the club a new look as part of a larger effort to attract more members. </p>
-			</div>
+			<div class="content-row" style="background-color: #efefef">
 
-			<div id="ccm-logo-container">
-				<div id="ccm-logo"></div>
+				<div id="ccm-logo"><img src="../assets/ccm/logo.png" style="width: 100%"></div>
 				<div id="ccm-logo-desc"><p>Since CCM had no exisiting logo or brand, I was essentially starting with a blank slate. I began with creating a logo to unify the club under one iconic image, which was inspired by <a href="https://dribbble.com/shots/222354-Music-Town-logotype" target="_blank">Igor Garybaldi’s logo for Music Town</a>. I put my own Berkeley spin on it by playing with negative space to depict UC Berkeley’s Campanile in order to distinguish the club as a Cal organization.</p></div>
+
 			</div>
 
-			<div id="ccm-webpage1-container">
-				<div id="ccm-webpage1-desc"><p>Next, I decided to put my web design skills to practice by designing and building a <a href="http://ccm.berkeley.edu" target="_blank">new website for CCM</a>. Since the website would play a key role in getting students to join our club, I made use of some photos we had in order to visually give our audience a clearer idea of what the club does and how it operates the very first time they visit our website.</p></div>
-				<div id="ccm-webpage1"></div>
+			<div class="content-row">
+
+					<div id="ccm-webpage1-desc"><p>Next, I decided to put my web design skills to practice by designing and building a <a href="http://ccm.berkeley.edu" target="_blank">new website for CCM</a>. Since the website would play a key role in getting students to join our club, I made use of some photos we had in order to visually give our audience a clearer idea of what the club does and how it operates the very first time they visit our website.</p></div>
+					<div id="ccm-webpage1"><img src="../assets/ccm/webpage1.png" style="width: 100%"></div>
+
 			</div>
 
-			<div id="ccm-webpage2-container">
-				<center><img id="ccm-webpage2" src="../assets/ccm/webpage2.png">
-				<img id="ccm-webpage2-mobile" src="../assets/ccm/webpage2-mobile.png"></center>
-				<p>Since the club’s main activity is performing at local senior homes and hosting jam sessions before the performances, I wanted to make sure that the event schedule was a highlighted feature of the website and could be easily viewed on a mobile device for a member to quickly check the website for where the next concert is scheduled to be. On the desktop view of the website, members can also see a map of all of our event locations. Just for practice, I used Angular.js to read the event information from a JSON file and render it onto the event page.</p>
+			<div class="content-row" style="background-color: #efefef">
+					<img id="ccm-webpage2" src="../assets/ccm/webpage2.png" style="width: 70%">
+					<img id="ccm-webpage2-mobile" src="../assets/ccm/webpage2-mobile.png" style="width: 25%">
+					<p style="margin-top: 20px">Since the club’s main activity is performing at local senior homes and hosting jam sessions before the performances, I wanted to make sure that the event schedule was a highlighted feature of the website and could be easily viewed on a mobile device for a member to quickly check the website for where the next concert is scheduled to be. On the desktop view of the website, members can also see a map of all of our event locations. Just for practice, I used Angular.js to read the event information from a JSON file and render it onto the event page.</p>
+
 			</div>
 
 		</main>

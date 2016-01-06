@@ -9,12 +9,12 @@
 		<script>try{Typekit.load();}catch(e){}</script>
 
 		<link rel="stylesheet" href="../css/style.css">
-		<link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#titlebg {
+			#proj-title, footer {
 				background-color: rgb(98, 186, 255);
 			}
 
@@ -27,30 +27,6 @@
 				float: right;
 			}
 
-			.row-container {
-				width: 100%;
-				height: auto;
-				margin-top: 50px;
-				text-align: center;
-			}
-
-			.cell {
-				display: inline-block;
-				width: 25%;
-				padding: 20px;
-				text-align: center;
-				vertical-align: top;
-			}
-
-			.cell img {
-				width: 80%;
-				padding-bottom: 10px;
-			}
-
-			.row-container ul li {
-				padding-bottom: 10px;
-			}
-
 			main a:link, main a:visited {
 				color: rgb(98, 186, 255);
 			}
@@ -60,8 +36,9 @@
 			}
 
 			.art {
-				width: 700px;
-				margin-bottom: 50px;
+				width: 45%;
+				margin: 0 2%;
+				vertical-align: middle;
 			}
 
 		</style>
@@ -70,37 +47,46 @@
 
 	<body>
 
-		<div id="titlebg"></div>
-
 		<nav ng-include="'../nav.html'"></nav>
 
 		<main>
 
-			<div id="proj-title">
+			<div id="proj-title" class="content-row">
 
-				<h1>The Daily Californian</h1>
-				Graphic Design
+				<div id="proj-title-text">
+					<h1>The Daily Californian</h1>
+					Graphic Design
+				</div>
 
 			</div>
 
-			<div id="tools">
-				<h2>Tools Used</h2>
-				<ul>
-					<li>Illustrator</li>
-				</ul>
+			<div class="content-row">
+
+				<div id="tools">
+					<ul>
+						<li>Illustrator</li>
+					</ul>
+				</div>
+
+				<div id="overview">
+					<h2>Overview</h2>
+					<p>In the summer of 2013, I started working as an infographic artist at <a href="http://www.dailycal.org/" target="_blank">The Daily Californian</a>, UC Berkeley's only student-run news publication. Before starting, I actually had no idea how to use Illustrator; I only had experience with Photoshop (yes, I admit that I used to do all my graphic design work in Photoshop...)! I owe a big part of my Illustrator knowledge and experience to my time at the Daily Cal!</p>
+				</div>
+
 			</div>
 
-			<div id="overview">
-				<h2>Overview</h2>
-				<p>In the summer of 2013, I started working as an infographic artist at <a href="http://www.dailycal.org/" target="_blank">The Daily Californian</a>, UC Berkeley's only student-run news publication. Before starting, I actually had no idea how to use Illustrator; I only had experience with Photoshop! (Yes, admit that I used to do all my graphic design work in Photoshop....) I owe a big part of my Illustrator knowledge and experience to my time at the Daily Cal!</p>
-			</div>
-
-			<div class="row-container" style="margin-top: 100px">
-				<img src="../assets/dailycal/dailycal-1.jpg" class="art">
+			<div class="content-row" style="padding-top: 30px; padding-bottom: 0">
 				<img src="../assets/dailycal/dailycal-2.jpg" class="art">
 				<img src="../assets/dailycal/dailycal-3.jpg" class="art">
+			</div>
+
+			<div class="content-row" style="padding-top: 0; padding-bottom: 30px">
 				<img src="../assets/dailycal/dailycal-4.jpg" class="art">
 				<img src="../assets/dailycal/dailycal-5.jpg" class="art">
+			</div>
+
+			<div class="content-row" style="padding-top: 0; margin-left: 1.5%">
+				<img src="../assets/dailycal/dailycal-1.jpg" style="width: 95%">
 			</div>
 
 		</main>

@@ -1,101 +1,122 @@
 @font-face {
-    font-family: 'league_spartanregular';
-    src: url('/fonts/leaguespartan-bold-webfont.eot');
-    src: url('/fonts/leaguespartan-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/leaguespartan-bold-webfont.woff2') format('woff2'),
-         url('/fonts/leaguespartan-bold-webfont.woff') format('woff'),
-         url('/fonts/leaguespartan-bold-webfont.ttf') format('truetype'),
-         url('/fonts/leaguespartan-bold-webfont.svg#league_spartanregular') format('svg');
+    font-family: 'graphik-regular';
+    src: url('/fonts/Graphik-Regular.eot');
+    src: url('/fonts/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Graphik-Regular.woff2') format('woff2'),
+         url('/fonts/Graphik-Regular.woff') format('woff'),
+         url('/fonts/Graphik-Regular.ttf') format('truetype'),
+         url('/fonts/Graphik-Regular.svg#graphik-regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'montserrat-light';
-    src: url('/fonts/montserrat-light-webfont.eot');
-    src: url('/fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/montserrat-light-webfont.woff2') format('woff2'),
-         url('/fonts/montserrat-light-webfont.woff') format('woff'),
-         url('/fonts/montserrat-light-webfont.ttf') format('truetype'),
-         url('/fonts/montserrat-light-webfont.svg#montserrat-light') format('svg');
+    font-family: 'graphik-light';
+    src: url('/fonts/Graphik-Light.eot');
+    src: url('/fonts/Graphik-Light.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Graphik-Light.woff2') format('woff2'),
+         url('/fonts/Graphik-Light.woff') format('woff'),
+         url('/fonts/Graphik-Light.ttf') format('truetype'),
+         url('/fonts/Graphik-Light.svg#graphik-light') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'montserrat-ultralight';
-    src: url('/fonts/montserrat-ultralight-webfont.eot');
-    src: url('/fonts/montserrat-ultralight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/montserrat-ultralight-webfont.woff2') format('woff2'),
-         url('/fonts/montserrat-ultralight-webfont.woff') format('woff'),
-         url('/fonts/montserrat-ultralight-webfont.ttf') format('truetype'),
-         url('/fonts/montserrat-ultralight-webfont.svg#montserrat-ultralight') format('svg');
+    font-family: 'graphik-medium';
+    src: url('/fonts/Graphik-Medium.eot');
+    src: url('/fonts/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/Graphik-Medium.woff2') format('woff2'),
+         url('/fonts/Graphik-Medium.woff') format('woff'),
+         url('/fonts/Graphik-Medium.ttf') format('truetype'),
+         url('/fonts/Graphik-Medium.svg#graphik-medium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-	font-family: 'montserrat-light', serif;
+	font-family: 'graphik-regular', sans-serif;
 	font-weight: normal;
 	font-size: 15px;
 	line-height: 22px;
-	color: #595959;
+	color: #555555;
 	margin: 0;
+	letter-spacing: .5px;
 }
 
 a:link, a:visited, a:active {
 	text-decoration: none;
+
+}
+
+a:hover {
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
 }
 
 nav {
 	position: absolute;
-	top: 10px;
+	top: 0;
 	left: 0;
 	height: 80px;
+	z-index: 1;
 	width: 100%;
+	padding-top: 30px;
 }
 
-nav #container {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 20px 75px;
+.container {
+	padding: 0 200px;
+}
+
+#left-container {
+	width: 50%;
+	float: left;
+}
+
+#right-container {
+	width: 50%;
+	float: left;
 }
 
 nav #logo {
 	width: 50px;
 	height: 39px;
-	background-image: url('/assets/logo-white.png');
+	background-image: url('/assets/icons/logo-white.png');
 	background-size: 100% 100%;
-	float: left;
 }
 
-nav ul {
+.container ul {
 	margin: 0;
 	float: right;
 	padding: 5px 0 0 0;
-	font-family: 'league_spartanregular';
-	letter-spacing: .5px;
+	font-family: 'graphik-medium';
 	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 12px;
+	font-size: 13px;
 	color: #ffffff;
 }
 
-nav ul li {
+.container ul li {
 	list-style-type: none;
 	display: inline-block;
+}
+
+nav ul li {
 	margin-left: 30px;
 }
 
-nav ul > li:first-child {
+footer ul li {
+	margin-left: 5px;
+}
+
+.container ul > li:first-child {
 	margin-left: 0;
 }
 
 nav a:link, nav a:visited {
 	color: inherit;
 	text-decoration: none;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
 }
 
 nav a:hover {
@@ -111,52 +132,51 @@ nav a:hover {
 	z-index: -1;
 }
 
-main {
-	max-width: 1000px;
-	margin: 100px auto 75px auto;
-	padding: 0 75px;
-}
-
 main p {
-	line-height: 35px;
+	line-height: 30px;
 	margin-bottom: 0;
 }
 
-main a:link, main a:visited {
-	color: inherit;
-	border-bottom: 1px solid;
-    -webkit-transition: color .2s;
-    transition: color .2s;
+main ul li {
+	line-height: 30px;
+	list-style-type: none;
+}
+
+main a:hover {
+	opacity: .7;
 }
 
 h2 {
-	font-family: "league_spartanregular";
-	letter-spacing: .5px;
+	font-family: "graphik-medium";
 	font-weight: normal;
 	font-size: 25px;
-	text-transform: uppercase;
 	line-height: 30px;
 	margin: 0;
 }
 
 #proj-title {
-	margin: 135px 0 125px 0;
+	height: 175px;
 	color: #ffffff;
 	font-size: 18px;
+	position: relative;
 }
 
-#proj-title h1 {
-	font-family: "league_spartanregular";
-	letter-spacing: .5px;
+#proj-title-text {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 60px;
+	font-family: "graphik-light";
+}
+
+#proj-title-text h1 {
+	font-family: "graphik-medium";
 	font-weight: normal;
 	font-size: 35px;
-	text-transform: uppercase;
-	line-height: 40px;
-	margin: 15px 0;
+	margin-bottom: 10px;
 }
 
-main ul li {
-	line-height: 35px;
+.content-row {
+	padding: 60px 200px;
 }
 
 #overview {
@@ -167,6 +187,8 @@ main ul li {
 #tools {
 	width: 210px;
 	float: right;
+	padding-top: 30px;
+	color: #bbbbbb;
 }
 
 .row-container {
@@ -190,31 +212,25 @@ main ul li {
 	padding-bottom: 10px;
 }
 
-p.caption {
-	font-size: 13px;
-	line-height: 140%;
-	font-family: 'montserrat-ultralight';
-}
-
 footer {
-	width: 100%;
+	height: 50px;
 	background-color: #999999;
-	padding: 30px 0;
+	padding: 25px 0;
 }
 
-footer #container {
-	max-width: 1000px;
+footer .container {
 	margin: 0 auto;
 	color: #ffffff;
+	padding-top: 10px;
 }
 
 footer a:link, footer a:visited {
-	border-bottom: 1px solid;
 	color: #ffffff;
+	opacity: 1;
 }
 
 footer a:hover {
-	color: #dddddd;
+	opacity: .7;
 }
 
 a:link.logo-link, a:visited.logo-link {
@@ -224,14 +240,5 @@ a:link.logo-link, a:visited.logo-link {
 .logo-link img {
 	width: 25px;
 	height: 25px;
-	margin-right: 5px;
-	display: inline;
 	border: none;
-	opacity: .7;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
-}
-
-.logo-link img:hover {
-	opacity: 1;
 }

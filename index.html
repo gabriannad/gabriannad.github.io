@@ -8,57 +8,38 @@
 		<script src="//use.typekit.net/psi4lel.js"></script>
 		<script>try{Typekit.load();}catch(e){}</script>
 
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#titlebg {
-				background: url('assets/bg.png') repeat fixed;
-				background-size: 174px 179px;
+			#proj-title {
+				background-color: #ef4b54;
+				height: 200px;
 			}
 
 			main {
 				margin-bottom: 15px;
 			}
 
-			div.thumb {
-				padding: 10px 10px 0 10px;
-			}
-
 			div.thumb img {
-				max-width: 100%;
+				max-width: 95%;
 			}
 
 			div.description {
-				padding: 5px 15px 15px 15px;
+				font-size: 12px;
+				color: #595959;
+				padding-bottom: 15px;
 			}
 
 			div.project {
-				width: 33%;
+				width: 32.93%;
 				display: inline-block;
-				text-align: center;
 				vertical-align: top;
-				margin-bottom: 40px;
+				margin-bottom: 0px;
 			    -webkit-transition: opacity .3s;
 			    transition: opacity .3s;
-			}
-
-			.project .description p {
-				font-size: 13px;
-				line-height: 22px;
-				margin-top: 5px;
-			}
-
-			.project h2 {
-				text-transform: uppercase;
-				margin: 0;
-				font-family: 'league_spartanregular';
-				font-size: 19px;
-				letter-spacing: .5px;
-				line-height: 30px;
-				color: #404040;
 			}
 
 			main a:link, main a:visited {
@@ -70,12 +51,8 @@
 				opacity: .7;
 			}
 
-			.description p {
-				margin-top: 0;
-			}
-
 			footer {
-				background-color: #908F99;
+				background-color: #EF4B5A;
 			}
 		</style>
 
@@ -83,90 +60,88 @@
 
 	<body>
 
-		<div id="titlebg"></div>
-
-		<nav ng-include="'/nav.html'"></nav>
+		<nav ng-include="'../nav.html'"></nav>
 
 		<main>
 
-		<div id="proj-title">
+			<div id="proj-title" class="content-row">
 
-			<h1>Gabrianna Dumaguin</h1>
-			Cal student, designer/developer hybrid, occasional human being
-
-		</div>
-
-		<a href="work/vertigo">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/vertigo.png">
+				<div id="proj-title-text">
+					<h1>Gabrianna Dumaguin</h1>
+					Cal student, designer/developer hybrid, occasional human being
 				</div>
-				<div class="description">
-					<h2>Pivot</h2>
-					<p>A version control platform that makes it easy for designers to collaborate on a project</p>
-				</div>
+
 			</div>
-		</a>
 
-		<a href="work/spotter">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/spotter.jpg">
-				</div>
-				<div class="description">
-					<h2>Spotter</h2>
-					<p>A smartphone and smartwatch app that not only allows you to create custom workouts but also guides you through them at the gym</p>
-				</div>
-			</div>
-		</a>
+			<div class="content-row">
 
-		<a href="work/derive">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/derive.jpg">
-				</div>
-				<div class="description">
-					<h2>Dérive</h2>
-					<p>Interactive protoype for an app that lets you explore your surroundings</p>
-				</div>
-			</div>
-		</a>
+				<a href="work/pivot">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/pivot.png">
+						</div>
+						<div class="description">
+							Pivot
+						</div>
+					</div>
+				</a>
 
-		<a href="work/ccm">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/ccm.jpg">
-				</div>
-				<div class="description">
-					<h2>Cal Community Music</h2>
-					<p>Rebranding of Cal Community Music, a group of student volunteers that performs at Berkeley senior homes every weekend</p>
-				</div>
-			</div>
-		</a>
+				<a href="work/spotter">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/spotter.png">
+						</div>
+						<div class="description">
+							Spotter
+						</div>
+					</div>
+				</a>
 
-		<a href="work/illustrations">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/vectors.png">
-				</div>
-				<div class="description">
-					<h2>Illustrations</h2>
-					<p>Vector illustrations of friends</p>
-				</div>
-			</div>
-		</a>
+				<a href="work/derive">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/derive.png">
+						</div>
+						<div class="description">
+							Dérive
+						</div>
+					</div>
+				</a>
 
-		<a href="work/dailycal">
-			<div class="project">
-				<div class="thumb">
-					<img src="assets/thumbs/dailycal.png">
-				</div>
-				<div class="description">
-					<h2>The Daily Californian</h2>
-					<p>Work I did for The Daily Californian as an infographic artist</p>
-				</div>
+				<a href="work/ccm">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/ccm.jpg">
+						</div>
+						<div class="description">
+							Cal Community Music
+						</div>
+					</div>
+				</a>
+
+				<a href="work/illustrations">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/vectors.png">
+						</div>
+						<div class="description">
+							Illustrations
+						</div>
+					</div>
+				</a>
+
+				<a href="work/dailycal">
+					<div class="project">
+						<div class="thumb">
+							<img src="assets/thumbs/dailycal.png">
+						</div>
+						<div class="description">
+							The Daily Californian
+						</div>
+					</div>
+				</a>
+
 			</div>
-		</a>
 
 		</main>
 
