@@ -261,4 +261,26 @@ a:link.logo-link, a:visited.logo-link {
 		text-align: center;
 	}
 
+@media only screen and (max-width: 600px) {
+
+	.content-row {
+		padding: 8% 5%;
+	}
+
+	.container {
+		padding: 0 5%;
+	}
+
+	nav {
+		padding-top: 4%;
+	}
+
+	#proj-title-text {
+		width: 90%;
+	}
+
+	body {
+		font-size: 18px;
+	}
+
 }

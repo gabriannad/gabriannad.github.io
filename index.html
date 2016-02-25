@@ -37,6 +37,10 @@
 				padding-bottom: 15px;
 			}
 
+			#projects-container {
+				padding: 60px 11.3%;
+			}
+
 			div.project {
 				width: 30.9%;
 				display: inline-block;
@@ -75,6 +79,23 @@
 
 			}
 
+			@media only screen and (max-width: 600px) {
+
+				#projects-container {
+					padding: 0;
+				}
+
+				div.project {
+					margin: 0;
+					width: 100%;
+				}
+
+				div.description {
+					display: none;
+				}
+
+			}
+
 		</style>
 
 	</head>
@@ -94,7 +115,7 @@
 
 			</div>
 
-			<div class="content-row" style="padding: 60px 11.3%">
+			<div class="content-row" id="projects-container">
 
 				<a href="work/pivot">
 					<div class="project">
