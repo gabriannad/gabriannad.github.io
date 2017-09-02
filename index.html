@@ -15,12 +15,43 @@
 
 		<style type="text/css">
 			body {
-				background-color: #410BAB;
+				background-color: #FFF;
 			}
 
-			#proj-title {
-				background-color: #410BAB;
+			#home-header {
 				height: 200px;
+				color: #333;
+				font-size: 18px;
+				position: relative;
+			}
+
+			#home-header-text {
+				width: 76%;
+				position: absolute;
+				bottom: 0;
+				margin-bottom: 60px;
+				font-family: "graphik-light";
+			}
+
+			#home-header-text h1 {
+				font-family: "graphik-medium";
+				font-weight: normal;
+				font-size: 35px;
+				margin-bottom: 5px;
+				line-height: 40px;
+			}
+
+			.logo-link img {
+			    -webkit-filter: brightness(30%); /* Safari 6.0 - 9.0 */
+			    filter: brightness(30%);
+			}
+
+			footer .container {
+				color: #333;
+			}
+
+			footer a:link, footer a:visited {
+				color: #999;
 			}
 
 			main {
@@ -50,6 +81,17 @@
 			    transition: opacity .3s;
 			}
 
+			.container ul {
+				color: #333;
+			}
+
+			nav #logo {
+				width: 50px;
+				height: 39px;
+				background-image: url('/assets/icons/logo-black.png');
+				background-size: 100% 100%;
+			}
+
 			main a:link, main a:visited {
 				text-decoration: none;
 				border: none;
@@ -60,7 +102,7 @@
 			}
 
 			footer {
-				background-color: #410BAB;
+				background-color: #fff;
 			}
 
 			@media only screen and (max-width: 1200px) {
@@ -116,16 +158,23 @@
 
 		<main>
 
-			<div id="proj-title" class="content-row">
+			<div id="home-header" class="content-row">
 
-				<div id="proj-title-text">
+				<div id="home-header-text">
 					<h1>Gabrianna Dumaguin</h1>
-					Cal student, designer/developer hybrid, occasional human being
+					Product Designer at Yelp
 				</div>
 
 			</div>
 
 			<div class="content-row" id="projects-container">
+
+<!-- 				<a href="work/reviewcompose">
+					<div class="project">
+						<div class="thumb"><img src="assets/thumbs/reviewcompose.png"></div>
+						<div class="description">Yelp Desktop Review Compose Page</div>
+					</div>
+				</a> -->
 
 				<a href="work/pivot">
 					<div class="project">
@@ -173,7 +222,24 @@
 
 		</main>
 
-		<footer ng-include="'/footer.html'"></footer>
+	<footer>
+		<div class="container">
+
+			<div id="left-container" style="padding-top: 7px">
+				Designed & <a href="https://github.com/gabriannad/gabriannad.github.io" target="_blank">developed</a> by Gabrianna Dumaguin
+			</div>
+
+			<div id="right-container">
+				<ul>
+					<li><a class="logo-link" href="https://www.linkedin.com/pub/gabrianna-dumaguin/79/b3a/268" target="_blank"><img src="/assets/icons/linkedin-logo.png"></a></li>
+					<li><a class="logo-link" href="https://behance.net/gabrianna" target="_blank"><img src="/assets/icons/behance-logo.png"></a></li>
+					<li><a class="logo-link" href="https://github.com/gabriannad" target="_blank"><img src="/assets/icons/github-logo.png"></a></li>
+					<li><a class="logo-link" href="assets/other/resume.pdf" target="_blank"><img src="/assets/icons/resume-button.png"></a></li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
 

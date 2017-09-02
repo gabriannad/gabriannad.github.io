@@ -169,7 +169,8 @@ h2 {
 	font-family: "graphik-medium";
 	font-weight: normal;
 	font-size: 35px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+	line-height: 40px;
 }
 
 .content-row, .container {
@@ -206,7 +207,6 @@ h2 {
 
 footer {
 	height: 50px;
-	background-color: #999999;
 	padding: 25px 0;
 }
 
