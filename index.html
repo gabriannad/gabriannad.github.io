@@ -40,7 +40,7 @@
 				font-size: 35px;
 				margin-bottom: 5px;
 				line-height: 40px;
-				color: #111111;
+				color: #333333;
 			}
 
 			.logo-link img {
@@ -65,10 +65,27 @@
 			}
 
 			div.description {
-				font-size: 12px;
-				color: #595959;
-				padding-bottom: 15px;
-				display: none;
+				position: absolute;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(255,255,255,.9);
+				font-size: 20px;
+				line-height: 25px;
+				font-weight: bold;
+				color: #111111;
+				margin: auto;
+				opacity: 0;
+			    -webkit-transition: opacity .3s;
+			    transition: opacity .3s;
+			    display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    text-align: center;
+			}
+
+			div.description:hover {
+				opacity: 1;
 			}
 
 			#projects-container {
@@ -82,6 +99,7 @@
 				margin: 1%;
 			    -webkit-transition: opacity .3s;
 			    transition: opacity .3s;
+			    position: relative;
 			}
 
 			.container ul {
@@ -89,7 +107,7 @@
 			}
 
 			nav a:link, nav a:visited {
-				color: #111111;
+				color: #333333;
 			}
 
 			nav #logo {
@@ -104,9 +122,9 @@
 				border: none;
 			}
 
-			a:hover .project {
+/*			a:hover .project {
 				opacity: .7;
-			}
+			}*/
 
 			footer {
 				background-color: #fff;
@@ -179,7 +197,7 @@
 				<a href="work/reviewcompose">
 					<div class="project">
 						<div class="thumb"><img src="assets/thumbs/reviewcompose.png"></div>
-						<div class="description">Yelp Desktop Review Compose Page</div>
+						<div class="description">Yelp Desktop Review Compose</div>
 					</div>
 				</a>
 
@@ -204,7 +222,7 @@
 					</div>
 				</a>
 
-				<a href="work/derive">
+<!-- 				<a href="work/derive">
 					<div class="project">
 						<div class="thumb"><img src="assets/thumbs/derive.png"></div>
 						<div class="description">Dérive</div>
@@ -216,7 +234,7 @@
 						<div class="thumb"><img src="assets/thumbs/ccm.jpg"></div>
 						<div class="description">Cal Community Music</div>
 					</div>
-				</a>
+				</a> -->
 
 <!-- 				<a href="work/illustrations">
 					<div class="project">
