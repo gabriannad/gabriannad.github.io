@@ -1,0 +1,364 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"list-",
+				"list-style-type"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"mon",
+				"montserrat-regular"
+			],
+			[
+				"inlin",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "package",
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"LatexTools",
+				"LaTeXTools: Jump to PDF"
+			],
+			[
+				"late",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"Install Pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Gabi/Documents/Web Work/CCM/CCM website/css/style.css",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/old/pivot.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/old/spotter.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/old/derive.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/old/ccm.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/css/style.css",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/untitled.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/footer.html",
+		"/Users/Gabi/Documents/Web Work/gabriannad.github.io/about.html",
+		"/Users/Gabi/Documents/cs161/cs161proj3.pdf",
+		"/Users/Gabi/Documents/rails/fa15-lab6/db/seeds.rb",
+		"/Users/Gabi/Documents/rails/fa15-lab6/app/views/users/index.html.erb",
+		"/Users/Gabi/Documents/iOS/ios-decal-hw3/README.md",
+		"/Users/Gabi/Documents/rails/fa15-lab6/app/views/pokemons/index.html.erb",
+		"/Users/Gabi/Documents/rails/fa15-lab6/app/models/user.rb",
+		"/Users/Gabi/Documents/rails/fa15-lab6/app/models/pokemon.rb",
+		"/Users/Gabi/Documents/rails/fa15-hw3/db/migrate/20150930205455_rename_column_name.rb",
+		"/Users/Gabi/Documents/cs161/hw/hw2.tex",
+		"/Users/Gabi/Library/Application Support/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/Users/Gabi/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/Gabi/Documents/rails/fa15-hw1/autograder.rb",
+		"/Users/Gabi/Documents/rails/fa15-hw1/foobar.rb",
+		"/Users/Gabi/Documents/rails/fa15-hw1/hw1.rb",
+		"/Users/Gabi/Documents/Web Work/Personal Website/gabriannad.github.io/work/about.html",
+		"/Users/Gabi/Documents/Web Work/CCM/CCM website/index.html",
+		"/Users/Gabi/Documents/Design Work/Constant Contact/Other/Error Pages/error page.html",
+		"/Users/Gabi/Documents/Career Stuff/interview prep.txt"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"div.project",
+			"12%",
+			" class=\"art\"",
+			"#overview",
+			"\n\t\t\t\t\t<h2>Overview</h2>",
+			"overview",
+			"#overview",
+			"150px",
+			"list-style",
+			"ul ",
+			"right",
+			"-img",
+			"img",
+			"thumbs/",
+			"\n\n\t\t\t\t",
+			"')\">",
+			"img",
+			"\n\t\t\t\t\t\t<div class=\"thumb\"></div>",
+			"<img src=\"\">",
+			"thumb\"",
+			"</a>",
+			"<div class=\"project\">",
+			"<span",
+			"<div class=\"project\">",
+			"\n\n\t\t\t\t",
+			"\n\t\t\t\t\t",
+			"\n\t\t\t\t\t\t",
+			"\">\n\t\t\t\t\t",
+			"\n\t\t\t\t\t",
+			"\n\t\t\t\t",
+			"\n\n\t\t\t\t",
+			".project",
+			"</div>\n\t\t\t\t\t\t",
+			"span",
+			"description",
+			"div class=\"description\"",
+			"\n\t\t\t\t\t\t\t",
+			"\n\t\t\t\t",
+			"thumb",
+			"c5def7",
+			"Ji-hern",
+			"5C39EA",
+			"ef4b54",
+			"\tdeleted:    ",
+			"#DC3D8E",
+			" margin-right: 5%;",
+			"25",
+			"30",
+			"35",
+			"47",
+			"30",
+			" padding-bottom: 40px",
+			" padding-bottom: 30px",
+			"<br/>",
+			"\n\t\t\t\t<div class=\"cell\">",
+			" background-color: #c5def7",
+			"262626",
+			"row-container",
+			"assets/f",
+			"assets",
+			"logos",
+			"graphik",
+			"EF4B5A",
+			"Regular",
+			"regular",
+			"light",
+			"Medium",
+			"medium",
+			"uppercase",
+			"regular",
+			"description",
+			"Bold",
+			"bold",
+			"graphik",
+			"letter-spacing",
+			"Regular",
+			"regular",
+			"league",
+			"montserrat-ultralight-webfont",
+			"description",
+			"<h2>",
+			"footer",
+			"main",
+			"cell",
+			"<p>",
+			"color:",
+			"DC3D8E",
+			"aa49a2",
+			"d651cb",
+			"D45A84",
+			"C600BA",
+			"27",
+			"25%;",
+			"margin: 0 auto 70px auto",
+			"400px",
+			"max-",
+			" margin-bottom: 70px",
+			"margin",
+			" class=\"content-row\"",
+			"row-container",
+			"5098C9",
+			"429DDA",
+			"C4DAF1",
+			"row-container",
+			"##",
+			"line-height",
+			"cell",
+			"332e2e",
+			"333333",
+			"191919",
+			" style=\"color: #E61E25\"",
+			"main",
+			".2",
+			"link",
+			"hover",
+			"webkit",
+			"opacity",
+			"ul li",
+			"footer",
+			"container",
+			"text",
+			"nav ",
+			"logo",
+			"h1",
+			"100%",
+			"100$",
+			"width",
+			"100%"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 291.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
