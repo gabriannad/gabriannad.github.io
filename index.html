@@ -21,6 +21,7 @@
 		<link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<style type="text/css">
 			body {
@@ -60,7 +61,7 @@
 				font-size: 16px;
 				line-height: 25px;
 				color: #333333;
-				margin: 20px 0 35px;
+				margin: 20px 0 30px;
 			}
 
 			#projects-container {
@@ -123,33 +124,58 @@
 
 			}
 
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 1000px) {
+
+				main {
+					padding: 0 5%;
+				}
+
+				#about {
+					display: block;
+					float: none;
+					width: 100%;
+					max-width: 500px;
+					padding: 0 20px;
+					margin: 0 auto;
+					-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+					text-align: center;
+				}
+
+				#projects-container {
+					padding-left: 0;
+					width: 100%;
+					padding: 0 20px;
+					margin: 70px auto;
+					-webkit-box-sizing: border-box;
+					box-sizing: border-box;
+				}
+
+				#about .social-icons img {
+					margin: 0 9px;
+				}
 
 			}
 
-			@media only screen 
-			    and (min-device-width : 375px) // or 213.4375em
-			    and (max-device-width : 667px) // or 41.6875em
-			    and (width : 375px) // or 23.4375em
-			    and (height : 559px) // or 34.9375em
-			    and (orientation : portrait) 
-			    and (color : 8)
-			    and (device-aspect-ratio : 375/667)
-			    and (aspect-ratio : 375/559)
-			    and (device-pixel-ratio : 2)
-			    and (-webkit-min-device-pixel-ratio : 2) {
+			@media only screen and (max-width: 768px) {
+
+				main {
+					padding: 0;
+				}
 
 				#projects-container {
 					padding: 0;
 				}
 
-				div.project {
-					margin: 0;
-					width: 100%;
-				}
-
-				div.description {
-					display: none;
+				.description {
+					position: relative;
+					padding: 15px 0;
+					display: block;
+					opacity: 1;
+					font-size: 16px;
+					line-height: 25px;
+					font-family: 'graphik-medium';
+					color: #555555;
 				}
 
 			}
