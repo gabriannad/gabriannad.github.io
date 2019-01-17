@@ -2,6 +2,16 @@
 <html lang="en" ng-app>
 	<head>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355048-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-132355048-1');
+		</script>
+
 		<title>Gabrianna Dumaguin</title> 
 
 		<script src="//use.typekit.net/psi4lel.js"></script>
@@ -17,63 +27,78 @@
 				background-color: #FFF;
 			}
 
-			#home-header {
-				height: 250px;
-				color: #555;
-				font-size: 18px;
-				position: relative;
-			}
-
-			#home-header-text {
-				text-align: center;
-				width: 76%;
-				position: absolute;
-				bottom: 0;
-				margin-bottom: 60px;
-				font-family: "graphik-regular";
-				line-height: 30px;
-			}
-
-			#home-header-text h1 {
-				font-family: "graphik-medium";
-				font-weight: normal;
-				font-size: 45px;
-				margin-bottom: 10px;
-				line-height: 40px;
-				color: #333;
-			}
-
-			.logo-link img {
-			    -webkit-filter: brightness(30%); /* Safari 6.0 - 9.0 */
-			    filter: brightness(30%);
-			}
-
-			footer .container {
-				color: #333;
-			}
-
-			footer a:link, footer a:visited {
-				color: #999;
-			}
-
 			main {
-				margin-bottom: 15px;
+				width: 100vw;
+				padding: 0 50px;
+				margin: 60px auto;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
 			}
 
-			div.thumb img {
+			#about {
+				display: block;
+				float: left;
+				width: 310px;
+			}
+
+			#profile-pic {
+				width: 100px;
+				border-radius: 50%;
+				margin-bottom: 25px;
+			}
+
+			#name {
+				font-family: 'futura-heavy';
+				text-transform: lowercase;
+				color: #333333;
+				font-size: 25px;
+				line-height: 30px;
+				margin: 0;
+			}
+
+			#about p {
+				font-size: 16px;
+				line-height: 25px;
+				color: #333333;
+				margin: 20px 0 35px;
+			}
+
+			#projects-container {
+				padding-left: 50px;
+				display: grid;
+			    grid-template-columns: repeat(2, auto);
+				grid-gap: 20px;
+			}
+
+			#projects-container a:hover{
+				opacity: 1;
+			}
+
+			.project {
+				width: 100%;
+				vertical-align: top;
+			    -webkit-transition: opacity .3s;
+			    transition: opacity .3s;
+			    position: relative;
+			}
+
+			.thumb img {
 				width: 100%;
 			}
 
-			div.description {
+			.description {
 				position: absolute;
 				top: 0;
 				height: 100%;
 				width: 100%;
-				background-color: rgba(255,255,255,.9);
+				padding: 0 20px;
+			    -webkit-box-sizing: border-box;
+			    box-sizing: border-box;
+				background-color: rgba(255,255,255,.95);
 				font-size: 20px;
 				line-height: 25px;
-				font-weight: bold;
-				color: #111111;
+				font-family: 'graphik-medium';
+				color: #333333;
 				margin: auto;
 				opacity: 0;
 			    -webkit-transition: opacity .3s;
@@ -84,50 +109,8 @@
 			    text-align: center;
 			}
 
-			div.description:hover {
+			.description:hover {
 				opacity: 1;
-			}
-
-			#projects-container {
-				padding: 60px 11.3%;
-			}
-
-			div.project {
-				width: 47%;
-				display: inline-block;
-				vertical-align: top;
-				margin: 1%;
-			    -webkit-transition: opacity .3s;
-			    transition: opacity .3s;
-			    position: relative;
-			}
-
-			.container ul {
-				color: #333;
-			}
-
-			nav a:link, nav a:visited {
-				color: #333333;
-			}
-
-			nav #logo {
-				width: 50px;
-				height: 39px;
-				background-image: url('/assets/icons/logo-black.png');
-				background-size: 100% 100%;
-			}
-
-			main a:link, main a:visited {
-				text-decoration: none;
-				border: none;
-			}
-
-/*			a:hover .project {
-				opacity: .7;
-			}*/
-
-			footer {
-				background-color: #fff;
 			}
 
 			@media only screen and (max-width: 800px) {
@@ -139,10 +122,6 @@
 			}
 
 			@media only screen and (max-width: 600px) {
-
-				#home-header-text {
-					width: 90%;
-				}
 
 			}
 
@@ -179,25 +158,26 @@
 
 	<body>
 
-		<nav ng-include="'../nav.html'"></nav>
-
 		<main>
 
-			<div id="home-header" class="content-row">
-
-				<div id="home-header-text">
-					<h1>Gabrianna Dumaguin</h1>
-					Currently designing consumer experiences at Yelp
+			<div id="about">
+				<img id="profile-pic" src="assets/other/me.jpg">
+				<h1 id="name">Gabrianna Dumaguin</h1>
+				<p>Product designer, currently at Yelp focusing on collecting and highlighting user-generated content.</p>
+				<div class="social-icons">
+					<a href="mailto:gabrianna.d@gmail.com" target="_blank"><img src="assets/icons/email.png"></a>
+					<a href="https://www.linkedin.com/in/gabrianna/" target="_blank"><img src="assets/icons/linkedin.png"></a>
+					<a href="https://www.instagram.com/gabrianna/" target="_blank"><img src="assets/icons/instagram.png"></a>
+					<a href="https://www.yelp.com/user_details?userid=enMYbieUvC3JYdlGBSRmGA" target="_blank"><img src="assets/icons/yelp.png"></a>
 				</div>
-
 			</div>
 
-			<div class="content-row" id="projects-container">
+			<div id="projects-container">
 
-				<a href="work/yelpigstories">
+				<a href="work/yelpreview">
 					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/yelpigstories.png"></div>
-						<div class="description">Yelp & Instagram Stories Integration</div>
+						<div class="thumb"><img src="assets/thumbs/yelpreview.png"></div>
+						<div class="description">The Yelp Reviewing Experience</div>
 					</div>
 				</a>
 
@@ -208,21 +188,21 @@
 					</div>
 				</a>
 
+				<a href="work/yelpigstories">
+					<div class="project">
+						<div class="thumb"><img src="assets/thumbs/yelpigstories.png"></div>
+						<div class="description">Yelp x Instagram Stories</div>
+					</div>
+				</a>
+
 				<a href="work/reviewcompose">
 					<div class="project">
 						<div class="thumb"><img src="assets/thumbs/reviewcompose.png"></div>
-						<div class="description">Yelp Desktop Review Compose</div>
+						<div class="description">Redesigning Yelp's Web Review Flow</div>
 					</div>
 				</a>
 
-				<a href="work/ctbonboarding">
-					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/ctbonboarding.png"></div>
-						<div class="description">Yelp Contributor Onboarding</div>
-					</div>
-				</a>
-
-				<a href="work/pivot">
+<!-- 				<a href="work/pivot">
 					<div class="project">
 						<div class="thumb"><img src="assets/thumbs/pivot.png"></div>
 						<div class="description">Pivot</div>
@@ -234,58 +214,11 @@
 						<div class="thumb"><img src="assets/thumbs/spotter.png"></div>
 						<div class="description">Spotter</div>
 					</div>
-				</a>
-
-<!-- 				<a href="work/derive">
-					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/derive.png"></div>
-						<div class="description">Dérive</div>
-					</div>
-				</a>
-
-				<a href="work/ccm">
-					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/ccm.jpg"></div>
-						<div class="description">Cal Community Music</div>
-					</div>
-				</a> -->
-
-<!-- 				<a href="work/illustrations">
-					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/vectors.png"></div>
-						<div class="description">Illustrations</div>
-					</div>
-				</a> -->
-
-<!-- 				<a href="work/dailycal">
-					<div class="project">
-						<div class="thumb"><img src="assets/thumbs/dailycal.png"></div>
-						<div class="description">The Daily Californian</div>
-					</div>
 				</a> -->
 
 			</div>
 
 		</main>
-
-	<footer>
-		<div class="container">
-
-			<div id="left-container" style="padding-top: 7px">
-				Designed & <a href="https://github.com/gabriannad/gabriannad.github.io" target="_blank">developed</a> by Gabrianna Dumaguin
-			</div>
-
-			<div id="right-container">
-				<ul>
-					<li><a class="logo-link" href="https://www.linkedin.com/pub/gabrianna-dumaguin/79/b3a/268" target="_blank"><img src="/assets/icons/linkedin-logo.png"></a></li>
-					<li><a class="logo-link" href="https://behance.net/gabrianna" target="_blank"><img src="/assets/icons/behance-logo.png"></a></li>
-					<li><a class="logo-link" href="https://github.com/gabriannad" target="_blank"><img src="/assets/icons/github-logo.png"></a></li>
-					<li><a class="logo-link" href="assets/other/resume.pdf" target="_blank"><img src="/assets/icons/resume-button.png"></a></li>
-				</ul>
-			</div>
-
-		</div>
-	</footer>
 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
 

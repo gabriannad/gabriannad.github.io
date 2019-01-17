@@ -2,6 +2,16 @@
 <html lang="en" ng-app>
 	<head>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355048-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-132355048-1');
+		</script>
+
 		<title>Gabrianna Dumaguin</title> 
 
 		<script src="//use.typekit.net/psi4lel.js"></script>
@@ -13,12 +23,21 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#proj-title, footer, body {
-				background-color: #F15C4F;
+
+			.proj-header {
+				background-color: #F35B4A;
+				overflow: hidden;
 			}
 
-			main a:link, main a:visited {
-				color: #0073BB ;
+			.proj-header img {
+				display: block;
+				max-height: calc(100vh - 190px);
+				max-width: 90%;
+				margin-top: 200px;
+			}
+
+			.img-block {
+				background-color: #FFACA3;
 			}
 		</style>
 
@@ -30,63 +49,82 @@
 
 		<main>
 
-			<div id="proj-title" class="content-row">
-
-				<div id="proj-title-text">
-					<h1>Yelp Desktop Review Compose Page</h1>
-					May–October 2017
-				</div>
-
+			<div class="proj-header">
+				<img src="../assets/reviewcompose/hero.png">
 			</div>
 
-			<div class="content-row">
+			<div class="proj-content">
 
-				<div id="tools">
-					<ul>
-						<li>Usability testing</li>
-						<li>Sketch</li>
-						<li>Principle</li>
-					</ul>
+				<div class="text">
+					<h1>Redesigning Yelp's Web Review Flow</h1>
+					<h3>May–October 2017</h3>
+
+					<p>By my second year working at Yelp, the review compose page on desktop hadn't been touched in a number of years despite it being the source of 40% of Yelp's reviews. In addition to giving the flow an overall visual refresh, I was tasked to optimize for sign-up conversions and increased review length as well as reduced page bounce rate.</p>
 				</div>
 
-				<div id="overview"> 
+				<div class="img-block single-img">
+					<div><img src="../assets/reviewcompose/before.png"></div>
+				</div>
+
+				<div class="text"> 
+					<h2>Project Goals</h2>
+
+					<p>At the time, the Write a Review page on web saw a conversion rate of 36%. In other words, of the people who visited this page, only 36% of them followed through with post a review. We saw an opportunity to increase this metric by making a number of improvements to the experience.</p>
+
+					<p>Functionally, there weren’t many things wrong with the usability of the existing page. In our guerilla usability tests, all participants were able to successfully write and submit a review. (Whether they wanted to or not was a different story.) My focus, then, was mainly on decluttering as much as I could so the user could focus on writing their review.</p>
+				</div>
+
+				<div class="text"> 
+					<h2>Recent Reviews</h2>
+					<p>On my list of things to remove from the page, recent reviews that other people had written about the business was on the chopping block. However, we had no idea if people actually found these helpful, so we couldn’t justify taking them away. Instead, I put the reviews in a collapsible panel, not only so users could easily hide them but also so we could keep track of when they did. Win-win!</p>
+				</div>
+
+				<div class="text"> 
+					<h2>Survey Questions</h2>
+					<p>The survey questions we asked on this page accounted for X percent of the business attribute information (Good for Kids, Takes Apple Pay, etc.) that we aggregate from our users. We made a hard decision to move these questions to the post-review flow, freeing up a good amount of real estate from the page and cognitive load on the user.</p>
+				</div>
+
+				<div class="text"> 
+					<h2>Concept Testing</h2>
 					<p>
-						The Contributions team at Yelp saw an opportunity to improve the review-writing experience on desktop by redesigning both the review compose and post-review pages. Although the experience was responsible for 40% of Yelp's reviews at the time, the overall designs hadn't been touched in a number of years, which was reflected in the amount of clutter and the lack of focus on review-writing on the page. As the sole designer on the Contributions team at the time, I redesigned the writing experience on web, which resulted in a 6% increase in reviews posted compared to the old design.
-					</p>
-					<br>
-					<p>
-						The review compose page design was used as an example in Nielsen Norman Group's article on <a href="https://www.nngroup.com/articles/commitment-consistency-ux/" target="_blank">commitment and behavioral consistency</a>!
+						Before finalizing the visual details of the design, I wanted to see how our users responded to our chosen direction. Because our proposed feature wasn’t meant to solve an inherent user “need,” we conducted a concept test rather than a usability study. Our goal was not to see if our users could complete a set task as quickly as possible, but rather to gauge general interest and intrigue in the feature, and to figure out which parts they found the most value in.
 					</p>
 				</div>
 
-			</div>
+				<div class="text"> 
+					<h2>Other Distractions</h2>
+					<p>Our users had no need to use the search bar when writing a review, so eliminating it was an easy decision to make. The decision to remove the business information, however, was not such an easy choice. In our guerilla user study, we saw that some partcipants had opened up the business in a new tab to reference photos of the business and other information. While I wanted to explore pulling out some of that helpful information and putting it on the review page, we decided to save that exploration for another project, and I instead simplified the business “passport,” as we call it, to just the name of the business that links to the business’s Yelp page in a new tab.</p>
+				</div>
 
-			<div class="content-row" style="background-color: #F5F5F5">
-				<center>
-					<img src="../assets/reviewcompose/war1.png" style="width: 100%; margin-bottom: 45px; box-shadow: 0px 2px 8px rgba(0,0,0,0.1);">
-					<div style="width: 48%; margin-right: 3%; display: inline-block; color: rgba(0,0,0,0.4); text-align: left;">
-						<img src="../assets/reviewcompose/war2.png" style="width: 100%; margin-bottom: 30px; box-shadow: 0px 2px 8px rgba(0,0,0,0.1);"><br>
-						Review compose page
-					</div>
-					<div style="width: 48%; display: inline-block; color: rgba(0,0,0,0.4); text-align: left;">
-						<img src="../assets/reviewcompose/war3.png" style="width: 100%; margin-bottom: 30px; box-shadow: 0px 2px 8px rgba(0,0,0,0.1);"><br>
-						Post-review page
-					</div>
-				</center>
-			</div>
+				<div class="img-block single-img">
+					<div><img src="../assets/reviewcompose/v1.png"></div>
+				</div>
+				<div class="caption">The first version of the page we tested saw a 4% drop in conversion rate.</div>
 
-			<div class="content-row" style="background-color: #E6E6E6">
-					<h2 style="margin-bottom: 40px; color: #999; font-family: 'graphik-semibold'">Before the Redesign</h3>
-					<div style="width: 48%; margin-right: 3%; display: inline-block; color: rgba(0,0,0,0.4); text-align: left;">
-						<img src="../assets/reviewcompose/Old compose.png" style="width: 100%; margin-bottom: 30px; box-shadow: 0px 2px 8px rgba(0,0,0,0.1);"><br>
-						Old review compose page
-					</div>
-					<div style="width: 48%; display: inline-block; color: rgba(0,0,0,0.4); text-align: left;">
-						<img src="../assets/reviewcompose/Old post-review.png" style="width: 100%; margin-bottom: 30px; box-shadow: 0px 2px 8px rgba(0,0,0,0.1);"><br>
-						Old post-review page
-					</div>
-			</div>
+				<div class="text"> 
+					<h2>v1 Results</h2>
+					<p>The first version of the redesign that we tested with 20% of our users ended up showing a 4% drop in conversion rate. Determined to find the problem, I ran a formal usability test on the new design but found no significant usability problems. Instead, we heard one of our participants voice a different concern:</p>
 
+					<q>I don’t really like writing reviews. Writing all those words makes it feel like an assignment.</q>
+
+					<p>Though this could easily be brushed off as something we couldn’t fix with the redesign of this page, there was an important notion behind this participant’s sentiment: the perception of the amount of work it takes to write a review. This supported a hypothesis we had behind why the new design showed a drop in reviews: that the large, blank canvas we were presenting to users to write their review was intimidating and possibly made more users change their mind about wanting to write a review.</p>
+				</div>
+
+				<div class="img-block single-img">
+					<div><img src="../assets/reviewcompose/v2.png"></div>
+				</div>
+				<div class="caption">Reintroducing the bounding box around the review saw a 3% better conversion rate than the old page.</div>
+
+				<div class="text"> 
+					<h2>v2 Success!</h2>
+					<p>To mitigate the impression of dauntingness that the new, cleaner design was giving off, I simply reintroduced the bounding box around the review and set the height to fit 700 characters, the length of a review that we consider to be ideal. The resulting design saw a conversation rate that was 3% higher than the old page! Lesson learned: sometimes too much minimalism can be a bad thing.</p>
+				</div>
+
+				<div id="back-to-projects">
+					<a href="/">← Back to all projects</a>
+				</div>
+
+			</div>
 		</main>
 
 		<footer ng-include="'/footer.html'"></footer>

@@ -2,6 +2,16 @@
 <html lang="en" ng-app>
 	<head>
 
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355048-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-132355048-1');
+		</script>
+
 		<title>Gabrianna Dumaguin</title> 
 
 		<script src="//use.typekit.net/psi4lel.js"></script>
@@ -13,12 +23,19 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 		<style type="text/css">
-			#proj-title, footer, body {
-				background-color: #C96FD8;
+
+			.proj-header {
+				background-color: #F286B9;
 			}
 
-			main a:link, main a:visited {
-				color: #C96FD8;
+			.proj-header img {
+				display: block;
+				max-height: calc(90vh - 200px);
+				margin-top: 70px;
+			}
+
+			.img-block {
+				background-color: #FFE3F0;
 			}
 		</style>
 
@@ -30,36 +47,30 @@
 
 		<main>
 
-			<div id="proj-title" class="content-row">
+			<div class="proj-header">
+				<img src="../assets/yelpigstories/hero.png">
+			</div>
 
-				<div id="proj-title-text">
-					<h1>Yelp & Instagram Stories Partnership</h1>
-					October 2018
+			<div class="proj-content">
+
+				<div class="text">
+					<h1>Yelp x Instagram Stories</h1>
+					<h3>October 2018</h3>
+
+					<p>In October 2018, we were approached by Facebook to do a partnership with Instagram Stories. We saw this as a huge opportunity for Yelp users to be able to share the great content they create on Yelp to their audiences on Instagram, and to potentially bring in new Yelp users from Instagram’s insanely large user base. With a tight timeline of one month to design this flow, I worked closely with a product manager and small engineering team to change our current Check-In feature to support sharing to Instagram Stories, as well as design the Instagram sticker itself, and have it shipped by that December.</p>
+				</div>
+
+				<div class="img-block three-img" style="background-color: transparent; padding: 0;">
+					<div><img src="../assets/yelpigstories/final1.png"></div>
+					<div><img src="../assets/yelpigstories/final2.png"></div>
+					<div><img src="../assets/yelpigstories/final3.png"></div>
+				</div>
+
+				<div id="back-to-projects">
+					<a href="/">← Back to all projects</a>
 				</div>
 
 			</div>
-
-			<div class="content-row">
-
-				<div id="tools">
-					<ul>
-						<li>Sketch</li>
-						<li>Principle</li>
-					</ul>
-				</div>
-
-				<div id="overview"> 
-					<p>
-						In October 2018, Yelp was approached by Facebook to do a partnership with Instagram Stories. We saw this as a huge opportunity for Yelp users to be able to share the great content they create on Yelp to their audiences on Instagram, and to potentially bring in new Yelp users from Instagram’s insanely large user base. With a tight timeline of one month to design this flow, I worked closely with a product manager and small engineering team to change our current Check-In feature to support sharing to Instagram Stories, as well as design the Instagram sticker itself, and have it shipped by that December.
-					</p>
-				</div>
-
-			</div>
-
-			<div style="background-color: #F7E2FA; overflow: hidden;">
-					<img src="../assets/yelpigstories/mocks.png" style="width: 100%;">
-			</div>
-
 		</main>
 
 		<footer ng-include="'/footer.html'"></footer>
