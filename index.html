@@ -84,6 +84,7 @@
 
 			.thumb img {
 				width: 100%;
+				display: block;
 			}
 
 			.description {
@@ -113,10 +114,11 @@
 				opacity: 1;
 			}
 
-			@media only screen and (max-width: 800px) {
+			@media only screen and (max-width: 1300px) {
 
-				div.project {
-					width: 99%;
+				#projects-container {
+				    grid-template-columns: repeat(1, auto);
+					grid-gap: 20px;
 				}
 
 			}
