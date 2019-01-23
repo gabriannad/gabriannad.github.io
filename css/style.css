@@ -158,7 +158,6 @@ nav a:hover {
 
 main a:hover {
 	opacity: .5;
-	cursor: default;
 }
 
 h1 {
@@ -339,7 +338,6 @@ footer {
 
 footer a:hover {
 	opacity: .7;
-	cursor: default;
 }
 
 #footer-content {
