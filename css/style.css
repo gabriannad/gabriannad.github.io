@@ -113,11 +113,10 @@ nav a:link, nav a:visited {
 
 nav a:hover {
 	opacity: .7;
-	cursor: default;
-    -webkit-transition: color .3s;
-    transition: color .3s;
-    -webkit-transition: opacity .3s;
-    transition: opacity .3s;
+	-webkit-transition: color .3s;
+	transition: color .3s;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
 }
 
 #nav-content {
@@ -125,8 +124,8 @@ nav a:hover {
 	max-width: 1080px;
 	padding: 0 20px;
 	margin: 45px auto 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
+    	box-sizing: border-box;
 }
 
 #left-container {
@@ -194,9 +193,9 @@ h3 {
 	max-width: 740px;
 	padding: 0 20px;
 	margin: 60px auto 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    clear: both;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	clear: both;
 }
 
 .text p {
@@ -246,13 +245,13 @@ q {
 	max-width: 980px;
 	padding: 70px;
 	margin: 70px auto 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    color: rgba(0,0,0,.7);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	color: rgba(0,0,0,.7);
 }
 
 .img-block img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 .single-img {
@@ -267,26 +266,26 @@ q {
 
 .two-col {
 	display: grid;
-    grid-template-columns: repeat(2, auto);
+	grid-template-columns: repeat(2, auto);
 	grid-gap: 70px;
 	align-items: end;
 }
 
 .three-img {
 	display: grid;
-    grid-template-columns: repeat(3, auto);
+	grid-template-columns: repeat(3, auto);
 	grid-gap: 30px;
 }
 
 .four-img {
 	display: grid;
-    grid-template-columns: repeat(4, auto);
+	grid-template-columns: repeat(4, auto);
 	grid-gap: 25px;
 }
 
 .five-img {
 	display: grid;
-    grid-template-columns: repeat(5, auto);
+	grid-template-columns: repeat(5, auto);
 	grid-gap: 25px;
 }
 
@@ -295,8 +294,8 @@ q {
 	max-width: 740px;
 	margin: 20px auto 0 auto;
 	padding: 0 20px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 
 	font-size: 14px;
 	line-height: 26px;
@@ -310,8 +309,8 @@ q {
 	max-width: 740px;
 	padding: 0 20px;
 	margin: 60px auto 70px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .link-to-project a {
@@ -323,8 +322,8 @@ q {
 	max-width: 740px;
 	padding: 0 20px;
 	margin: 60px auto 70px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 #back-to-projects a {
@@ -348,8 +347,8 @@ footer a:hover {
 	max-width: 1080px;
 	padding: 0 20px;
 	margin: 0 auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 	color: #f5f5f5;
 	background-color: #252525;
 }
@@ -385,7 +384,7 @@ footer a:hover {
 
 #footer-icons img {
 	-webkit-filter: invert(1);
-    filter: invert(1);
+	filter: invert(1);
 }
 
 .social-icons img {
