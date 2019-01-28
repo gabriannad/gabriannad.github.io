@@ -415,5 +415,47 @@ footer a:hover {
 
 @media only screen and (max-width: 768px) {
 
+	.img-block {
+		width: 100%;
+		padding: 20px 0;
+	}
+
+	.img-block div {
+		width: 100%;
+		max-width: 740px;
+		padding: 0 20px;
+		margin: 0 auto;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    clear: both;
+	}
+
+	#left-container {
+		display: block;
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#right-container {
+		display: none;
+	}
+
+	.two-col, .three-img, .four-img, .five-img {
+		display: block;
+	}
+
+	.two-col div img {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.three-img img, .four-img img, .five-img img {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
 
 }
