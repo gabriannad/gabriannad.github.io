@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+	<head>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355048-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-132355048-1');
+		</script>
+
+		<title>Gabrianna Dumaguin</title> 
+
+		<script src="//use.typekit.net/psi4lel.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+		<style type="text/css">
+
+			.proj-header {
+				background-color: #276EF1;
+			}
+
+			.proj-header img {
+				display: block;
+				max-height: calc(90vh - 200px);
+				margin-top: 70px;
+				max-width: 90%;
+			}
+
+			.img-block {
+				background-color: #EFF4FE;
+			}
+
+			a:link, a:visited, a:active {
+				color: #276EF1;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<nav ng-include="'../nav.html'"></nav>
+
+		<main>
+
+			<div class="proj-header" style="height: auto">
+				<img src="../assets/instantquote/hero.png" style="margin-top: 100px">
+			</div>
+
+			<div class="proj-content">
+
+				<div class="text">
+					<h1>Uber Freight Instant Quote</h1>
+					<h3>June 2020</h3>
+
+					<p>At the time, Uber Freight was spending quite a few dollars to show relevant ads to potential customers on Google search for search terms like “shipping quote” and “freight quote.” Because we didn’t appear organically in the results until the 6th page for “shipping quote” and not at all for “freight quote,” we wanted to improve our SEO ranking so we didn’t have to rely so much on our ad budget to get our services in front of potential customers.</p>
+
+					<p>Although our marketing pages are typically designed by the Uber Freight marketing team or a 3rd party agency, I was tasked to design this page because it would involve much more user interaction than a typical, strictly informational marketing page. You can see it live and in action <a href="https://www.uber.com/freight/shipper/instant-freight-quote/">here</a>!</p>
+				</div>
+
+				<div class="img-block single-img">
+					<div><img src="../assets/instantquote/shipperplatform.png" style="max-height: 578px; filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.22));"></div>
+				</div>
+				<div class="caption">[Maybe use a GIF here]</div>
+
+				<div class="text"> 
+					<h2>Opportunity</h2>
+
+					<p>Our platform made it easy for our existing users to get an instant freight quote (pictured above). So how might we give potential customers a similar experience, and give them a taste of how easy it is to use our shipper platform?</p>
+
+					<p>Our hypothesis was that by building a landing page on our marketing website that both allows shippers to get a quote on their shipment and ranks at the top of the SERP for “freight quote,” we could:</p>
+
+					<ol>
+						<li>Rely less on marketing dollars for user acquisition (business goal)</li>
+						<li>Provide potential customers a fast way to get a freight quote on their shipment (user goal)</li>
+					</ol>
+
+				</div>
+
+				<div class="img-block single-img" style="background-color: transparent; padding-top: 0px; padding-bottom: 0px">
+					<div><img src="../assets/instantquote/venndiagram.png" style="max-width: 740px"></div>
+				</div>
+
+				<div class="text"> 
+					<h2>Key metrics</h2>
+					<p>
+						This project hit on the first first two parts of the <a href="https://growwithward.com/aaarrr-pirate-funnel/">conversion funnel</a>:
+					</p>
+					<p>
+						<ol>
+							<li style="padding-bottom: 18px">
+								<b>Awareness</b><br>
+								Starting at the very top of funnel, we wanted to <b>boost awareness</b> of Uber Freight as a shipping provider amongst our target audience:
+								<ol style="list-style-type: lower-roman;">
+									<li>SERP ranking for search term “shipping quote”</li>
+									<li>SERP ranking for search term “freight quote”</li>
+								</ol>
+							</li>
+							<li>
+								<b>Acquisition</b><br>
+								Bringing potential customers to our marketing page meant little if we weren’t able to get them to <b>sign up</b> for our services, which meant that the UX for getting from quote to clicking on “sign up” needed to be seamless:
+								<ol style="list-style-type: lower-roman;">
+									<li>% of page visits that result in a sign-up click</li>
+									<li>% of page visits that result in an email capture</li>
+									<li>% of page visits that generate a quote</li>
+								</ol>
+							</li>
+						</ol>
+					</p>
+				</div>
+
+				<div class="text"> 
+					<h2>User flow</h2>
+					<p>
+						The high-level flow was pretty straightforward:
+
+						<ol>
+							<li>User lands on page</li>
+							<li>User enters minimum shipment information needed to generate a quote</li>
+							<li>User sees generated quotes</li>
+							<li>User is prompted to sign-up if they want to book with one of the given quotes</li>
+						</ol>
+
+						Because the sign-up flow was already built on its own page, we didn’t have much control over the sign-up conversion rate (optimizing the sign-up flow could be a whole project in and of itself!), so instead I focused on how to at least capture the user’s email address for email marketing. I identified and mapped out 3 possible flows:
+					</p>
+				</div>
+
+				<div class="img-block single-img">
+					<div><img src="../assets/instantquote/userflows.png" style="max-height: 100%"></div>
+				</div>
+
+				<div class="text"> 
+					<p>
+						After talking it over with the product manager & engineering team, we decided to go with option B: asking the user for their email right after they’ve entered their shipment information but before we show them the quote. We figured that, if a user is going to bounce from the page after seeing that their email address is required, it would at least be beneficial for SEO purposes to have them interact with the page and input their shipment information first rather than bouncing right away if one of the first things we ask for is their email.
+					</p>
+				</div>
+
+				<div class="text">
+					<h2>Page layout & hierarchy</h2>
+					<p>
+						After we narrowed down the flow, I started exploring page layout and content hierarchy using wireframes. There were a lot of different explorations for how to compose the page, but they all followed the same general guidelines:
+
+						<ol>
+							<li>The form fields & entry point for generating a quote (i.e. the “quote module”) should be above the fold, because getting a quote is the user’s main intent</li>
+							<li>SEO content that would help increase the page’s SERP ranking (like value props, FAQs, etc.) should follow after the quote module</li>
+						</ol>
+					</p>
+				</div>
+
+				<div class="img-block single-img" style="background-color: #E6E6E6;">
+					<div><img src="../assets/instantquote/moduleexplorations.png"></div>
+				</div>
+				<div class="caption">I explored 3 general options for the quote entry point: a big quote module, a small quote module, and a map quote module.</div>
+
+				<div class="img-block single-img" style="background-color: #E6E6E6;">
+					<div><img src="../assets/instantquote/interactionflow.png"></div>
+				</div>
+				<div class="caption">I followed the existing interaction pattern we used on our shipper platform in which a calendar of quotes loads below the form field inputs.</div>
+
+				<div class="text"> 
+					<h2>Visual language</h2>
+					<p>
+						In addition to narrowing down the page layout, I also had to decide whether to style this page more closely to the rest of our marketing pages, which featured bold photography, or use a visual style more similar to our actual shipper platform, which used friendlier illustrations that served more as aids to the user flows:
+					</p>
+				</div>
+
+				<div class="img-block" style="margin: 70px 0px 0px; max-width: 100%; display: grid; grid-template-columns: repeat(2, auto); grid-gap: 70px 70px; justify-content: center;">
+					<div>
+						<p>
+							<b>Direction A</b>
+						</p>
+							<img src="../assets/instantquote/directiona.png" style="filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.22))">
+
+						<p>
+							<ul style="font-size: 14px; line-height: 26px; padding-left: 15px">
+								<li>Uses a small, inline quote module with a big hero image</li>
+								<li>Relies more heavily on photography</li>
+								<li>Strictly abides by Uber branding guidelines</li>
+								<li>Very much looks like a “marketing” page</li>
+							</ul>
+						</p>
+					</div>
+					<div>
+						<p>
+							<b>Direction B</b>
+						</p>
+							<img src="../assets/instantquote/directionb.png" style="filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.22))">
+
+						<p>
+							<ul style="font-size: 14px; line-height: 26px; padding-left: 15px">
+								<li>Uses a bigger quote module that takes center stage</li>
+								<li>Uses illustrations rather than photography for visual aids</li>
+								<li>Utilizes the patterns & styling of shipper platform (the tool that we are getting them to sign up for)</li>
+								<li>Looks less “marketing”-like, more interactive</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+
+				<div class="text">
+					<p>
+						We decided to move forward with direction B, which we thought might stand out against a lot of our competitors’ marketing pages by looking more interactive and less static and information-heavy by having the quote module be front and center and relying less on big hero images.
+					</p>
+					<p>
+						We considered user testing the two directions but decided to go with our gut to save time & resources. (We only had a month of design time!)
+					</p>
+				</div>
+
+				<div class="img-block single-img">
+					<div><img src="../assets/instantquote/visualiterations.png" style="max-height: 70vh; filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.22))"></div>
+				</div>
+				<div class="caption">Rapid explorations on the quote module</div>
+
+				<div class="text"> 
+					<h2>Final deliverables</h2>
+					<p>After a few more rapid iterations on the quote module and some revs with our content designer on the copy & SEO content, we finally landed on a final design for the default state of the quote module. From there, designing the rest of the interaction for showing the quotes was just a matter of repurposing the same flow from our shipper platform.</p>
+				</div>
+
+				<div style="width: 100%; margin: 50px 0; text-align: center;"> 
+					<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; max-width: 1000px; height: 650px; margin: 0 50px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRKrZ8cpybTBui7bthYEpHv%2FInstant-Quote%3Ftype%3Ddesign%26node-id%3D1-498%26t%3D7Ofz4HUJdJsaOaAH-1%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A498%26mode%3Ddesign" allowfullscreen></iframe>
+				</div>
+
+				<div class="text"> 
+					<h2>Results</h2>
+					<p>
+						TBD
+					</p>
+				</div>
+
+				<div id="back-to-projects">
+					<a href="/">← Back to all projects</a>
+				</div>
+
+			</div>
+		</main>
+
+		<footer ng-include="'/footer.html'"></footer>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+
+	</body>
+</html>

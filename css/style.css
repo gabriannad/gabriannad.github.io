@@ -157,7 +157,7 @@ nav a:hover {
 }
 
 main a:hover {
-	opacity: .5;
+	opacity: .7;
 }
 
 h1 {
@@ -201,10 +201,18 @@ h3 {
 	margin: 20px 0 0;
 }
 
-.text b {
+.text b, b {
 	font-family: 'graphik-semibold';
 	font-weight: normal;
 	color: #444444;
+}
+
+ol li {
+	padding-left: 8px;
+}
+
+ul li {
+	padding-left: 8px;
 }
 
 hr {
