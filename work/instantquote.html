@@ -1,252 +1,360 @@
-<!DOCTYPE html>
-<html lang="en" ng-app>
-	<head>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
+    <style>
+        html, body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'graphik-regular', sans-serif;
+        }
+        #dialogText {
+            color: #333;
+            text-align: center;
+            line-height: 24px;
+            font-size: 18px;
+        }
+        #dialogText h1 {
+            font-size: 24px;
+            line-height: 28px;
+            font-family: 'graphik-semibold', sans-serif;
+            font-weight: normal;
+            margin: 10px 0;
+        }
+        
+        #dialogWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: table;
+            background-color: #FFFFFF;
+        }
+        
+        #dialogWrapCell {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        #mainDialog {
+            width: 600px;
+            margin: 5px auto 125px auto;
+            background-color: transparent;
+            overflow: hidden;
+            text-align: center;
+        }
+        #mainDialog > * {
+            padding: 30px 0px;
+        }
+        #passArea {
+            display: flex;
+            flex-direction: row;
+            padding: 0px;
+            background-color: white;
+            border: 2px solid #DDDDDD;
+            border-radius: 8px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        #passArea > * {
+            margin: 5px auto;
+        }
+        #passArea:focus-within {
+            border: 2px solid #333333;
+            border-radius: 8px;
+        }
+        #pass {
+            flex-grow:2;
+            width: 100%;
+            padding: 4px 0px 4px 12px;
+            font-size: 18px;
+            line-height: 32px;
+            font-family: 'graphik-regular', sans-serif;
+            border: none;
+            border-radius: 8px;
+            color: #333;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+            box-sizing: border-box;         /* Opera/IE 8+ */
+        }
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132355048-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+        #pass::placeholder {
+            color: #BBB;
+        }
 
-		  gtag('config', 'UA-132355048-1');
-		</script>
+        #pass:focus {
+            outline: none;
+        }
 
-		<title>Gabrianna Dumaguin</title> 
+        #messageWrapper {
+            vertical-align: middle;
+            line-height: 44px;
+            font-size: 16px;
+        }
+        
+        .notifyText {
+            display: none;
+        }
+        
+        #invalidPass {
+            color: #DE0B0B;
+        }
 
-		<script src="//use.typekit.net/psi4lel.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
+        .error {
+            display: none;
+            color: #DE0B0B;
+        }
+        
+        #success {
+            color: #158803;
+        }
+        
+        #submitPass {
+            width: 50px;
+            border-radius: 8px;
+            background-color: transparent;
+            border: none;
+            font-size: 18px;
+            line-height: 32px;
+            font-family: 'graphik-regular', sans-serif;
+            color: #CCC;
+            cursor: pointer;
+        }
+        
+        #submitPass:hover {
+            color: #333;
+            -webkit-transition: color .3s;
+            transition: color .7s;
+        }
 
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
-		<link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+        #submitPass svg {
+            width: 20px;
+            height: 20px;
+        }
 
-		<style type="text/css">
+        #contentFrame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #attribution {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+            color: #999;
+        }
+        #attribution a {
+            font-family: 'graphik-medium';
+            color: #999;
+        }
 
-			.proj-header {
-				background-color: #276EF1;
-			}
+        a:link, a:visited {
+            color: #333;
+        }
 
-			.proj-header img {
-				display: block;
-				max-height: calc(90vh - 200px);
-				margin-top: 70px;
-				max-width: 90%;
-			}
+        a:hover {
+            -webkit-transition: opacity .3s;
+            transition: opacity .3s;
+            opacity: .7;
+        }
+    </style>
+  </head>
+  <body>
+    <iframe id="contentFrame" frameBorder="0" allowfullscreen></iframe>
+    <div id="dialogWrap">
+        <div id="dialogWrapCell">
+            <div id="mainDialog">
+                <div id="dialogText">
+                    <h1>This project is password protected</h1>
+                    Please contact me at <a href="mailto:gabrianna.d@gmail.com">gabrianna.d@gmail.com</a> to request access
+                </div>
+                <div id="passArea">
+                    <input id="pass" type="password" name="pass" placeholder="password" autofocus>
+                    <button id="submitPass" type="button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="padding-left: 5px; display: block;">
+                            <path d="m22.2 12-6.5 9h-3.5l5.5-7.5H2v-3h15.7L12.2 3h3.5l6.5 9Z" fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
+                <span id="messageWrapper">
+                        <span id="invalidPass" class="error">Whoops, that's not right! Please try again.</span>
+                        <span id="trycatcherror" class="error">Sorry, something went wrong.</span>
+                        <span id="success" class="notifyText">Success!</span>
+                        &nbsp;
+                </span>
+                <div id="securecontext" class="error">
+                    <p>
+                        Sorry, but password protection only works over a secure connection. Please load this page via HTTPS.
+                    </p>
+                </div>
+                <div id="nocrypto" class="error">
+                    <p>
+                        Your web browser appears to be outdated. Please visit this page using a modern browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="attribution">
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
+    <script>
+    (function() {
 
-			.img-block {
-				background-color: #EFF4FE;
-			}
+        var pl = "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";
+        
+        var submitPass = document.getElementById('submitPass');
+        var passEl = document.getElementById('pass');
+        var invalidPassEl = document.getElementById('invalidPass');
+        var trycatcherror = document.getElementById('trycatcherror');
+        var successEl = document.getElementById('success');
+        var contentFrame = document.getElementById('contentFrame');
+        
+        // Sanity checks
 
-			a:link, a:visited, a:active {
-				color: #276EF1;
-			}
-		</style>
+        if (pl === "") {
+            submitPass.disabled = true;
+            passEl.disabled = true;
+            alert("This page is meant to be used with the encryption tool. It doesn't work standalone.");
+            return;
+        }
 
-	</head>
+        if (!isSecureContext) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#securecontext").style.display = "block";
+            return;
+        }
 
-	<body>
+        if (!crypto.subtle) {
+            document.querySelector("#passArea").style.display = "none";
+            document.querySelector("#nocrypto").style.display = "block";
+            return;
+        }
+        
+        function str2ab(str) {
+            var ustr = atob(str);
+            var buf = new ArrayBuffer(ustr.length);
+            var bufView = new Uint8Array(buf);
+            for (var i=0, strLen=ustr.length; i < strLen; i++) {
+                bufView[i] = ustr.charCodeAt(i);
+            }
+            return bufView;
+        }
 
-		<nav ng-include="'../nav.html'"></nav>
+        async function deriveKey(salt, password) {
+            const encoder = new TextEncoder()
+            const baseKey = await crypto.subtle.importKey(
+                'raw',
+                encoder.encode(password),
+                'PBKDF2',
+                false,
+                ['deriveKey'],
+            )
+            return await crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' },
+                baseKey,
+                { name: 'AES-GCM', length: 256 },
+                true,
+                ['decrypt'],
+            )
+        }
+        
+        async function doSubmit(evt) {
+            submitPass.disabled = true;
+            passEl.disabled = true;
 
-		<main>
+            let iv, ciphertext, key;
+            
+            try {
+                var unencodedPl = str2ab(pl);
 
-			<div class="proj-header" style="height: auto">
-				<img src="../assets/instantquote/hero.png" style="margin-top: 100px">
-			</div>
+                const salt = unencodedPl.slice(0, 32)
+                iv = unencodedPl.slice(32, 32 + 16)
+                ciphertext = unencodedPl.slice(32 + 16)
 
-			<div class="proj-content">
+                key = await deriveKey(salt, passEl.value);
+            } catch (e) {
+                trycatcherror.style.display = "inline";
+                console.error(e);
+                return;
+            }
 
-				<div class="text">
-					<h1>Uber Freight Instant Quote</h1>
-					<h3>June 2020</h3>
+            try {
+                const decryptedArray = new Uint8Array(
+                    await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext)
+                );
 
-					<p>At the time, Uber Freight was spending quite a few dollars to show relevant ads to potential customers on Google search for search terms like “shipping quote” and “freight quote.” Because we didn’t appear organically in the results until the 6th page for “shipping quote” and not at all for “freight quote,” we wanted to improve our SEO ranking so we didn’t have to rely so much on our ad budget to get our services in front of potential customers.</p>
+                let decrypted = new TextDecoder().decode(decryptedArray);
 
-					<p>Although our marketing pages are typically designed by the Uber Freight marketing team or a 3rd party agency, I was tasked to design this page because it would involve much more user interaction than a typical, strictly informational marketing page. You can see it live and in action <a href="https://www.uber.com/freight/shipper/instant-freight-quote/">here</a>!</p>
-				</div>
+                if (decrypted === "") throw "No data returned";
 
-				<div class="img-block single-img">
-					<div><img src="../assets/instantquote/shipperplatform.png" style="max-height: 578px; filter: drop-shadow(0px 10px 32px rgba(0, 0, 0, 0.22));"></div>
-				</div>
-				<div class="caption">[Maybe use a GIF here]</div>
+                const basestr = '<base href="." target="_top">';
+                const anchorfixstr = `
+                    <script>
+                        Array.from(document.links).forEach((anchor) => {
+                            const href = anchor.getAttribute("href");
+                            if (href.startsWith("#")) {
+                                anchor.addEventListener("click", function(e) {
+                                    e.preventDefault();
+                                    const targetId = this.getAttribute("href").substring(1);
+                                    const targetEl = document.getElementById(targetId);
+                                    targetEl.scrollIntoView();
+                                });
+                            }
+                        });
+                    <\/script>
+                `;
+                
+                // Set default iframe link targets to _top so all links break out of the iframe
+                if (decrypted.includes("<head>")) decrypted = decrypted.replace("<head>", "<head>" + basestr);
+                else if (decrypted.includes("<!DOCTYPE html>")) decrypted = decrypted.replace("<!DOCTYPE html>", "<!DOCTYPE html>" + basestr);
+                else decrypted = basestr + decrypted;
 
-				<div class="text"> 
-					<h2>Opportunity</h2>
-
-					<p>Our platform made it easy for our existing users to get an instant freight quote (pictured above). So how might we give potential customers a similar experience, and give them a taste of how easy it is to use our shipper platform?</p>
-
-					<p>Our hypothesis was that by building a landing page on our marketing website that both allows shippers to get a quote on their shipment and ranks at the top of the SERP for “freight quote,” we could:</p>
-
-					<ol>
-						<li>Rely less on marketing dollars for user acquisition (business goal)</li>
-						<li>Provide potential customers a fast way to get a freight quote on their shipment (user goal)</li>
-					</ol>
-
-				</div>
-
-				<div class="img-block single-img" style="background-color: transparent; padding-top: 0px; padding-bottom: 0px">
-					<div><img src="../assets/instantquote/venndiagram.png" style="max-width: 740px"></div>
-				</div>
-
-				<div class="text"> 
-					<h2>Key metrics</h2>
-					<p>
-						This project hit on the first first two parts of the <a href="https://growwithward.com/aaarrr-pirate-funnel/">conversion funnel</a>:
-					</p>
-					<p>
-						<ol>
-							<li style="padding-bottom: 18px">
-								<b>Awareness</b><br>
-								Starting at the very top of funnel, we wanted to <b>boost awareness</b> of Uber Freight as a shipping provider amongst our target audience:
-								<ol style="list-style-type: lower-roman;">
-									<li>SERP ranking for search term “shipping quote”</li>
-									<li>SERP ranking for search term “freight quote”</li>
-								</ol>
-							</li>
-							<li>
-								<b>Acquisition</b><br>
-								Bringing potential customers to our marketing page meant little if we weren’t able to get them to <b>sign up</b> for our services, which meant that the UX for getting from quote to clicking on “sign up” needed to be seamless:
-								<ol style="list-style-type: lower-roman;">
-									<li>% of page visits that result in a sign-up click</li>
-									<li>% of page visits that result in an email capture</li>
-									<li>% of page visits that generate a quote</li>
-								</ol>
-							</li>
-						</ol>
-					</p>
-				</div>
-
-				<div class="text"> 
-					<h2>User flow</h2>
-					<p>
-						The high-level flow was pretty straightforward:
-
-						<ol>
-							<li>User lands on page</li>
-							<li>User enters minimum shipment information needed to generate a quote</li>
-							<li>User sees generated quotes</li>
-							<li>User is prompted to sign-up if they want to book with one of the given quotes</li>
-						</ol>
-
-						Because the sign-up flow was already built on its own page, we didn’t have much control over the sign-up conversion rate (optimizing the sign-up flow could be a whole project in and of itself!), so instead I focused on how to at least capture the user’s email address for email marketing. I identified and mapped out 3 possible flows:
-					</p>
-				</div>
-
-				<div class="img-block single-img">
-					<div><img src="../assets/instantquote/userflows.png" style="max-height: 100%"></div>
-				</div>
-
-				<div class="text"> 
-					<p>
-						After talking it over with the product manager & engineering team, we decided to go with option B: asking the user for their email right after they’ve entered their shipment information but before we show them the quote. We figured that, if a user is going to bounce from the page after seeing that their email address is required, it would at least be beneficial for SEO purposes to have them interact with the page and input their shipment information first rather than bouncing right away if one of the first things we ask for is their email.
-					</p>
-				</div>
-
-				<div class="text">
-					<h2>Page layout & hierarchy</h2>
-					<p>
-						After we narrowed down the flow, I started exploring page layout and content hierarchy using wireframes. There were a lot of different explorations for how to compose the page, but they all followed the same general guidelines:
-
-						<ol>
-							<li>The form fields & entry point for generating a quote (i.e. the “quote module”) should be above the fold, because getting a quote is the user’s main intent</li>
-							<li>SEO content that would help increase the page’s SERP ranking (like value props, FAQs, etc.) should follow after the quote module</li>
-						</ol>
-					</p>
-				</div>
-
-				<div class="img-block single-img" style="background-color: #E6E6E6;">
-					<div><img src="../assets/instantquote/moduleexplorations.png"></div>
-				</div>
-				<div class="caption">I explored 3 general options for the quote entry point: a big quote module, a small quote module, and a map quote module.</div>
-
-				<div class="img-block single-img" style="background-color: #E6E6E6;">
-					<div><img src="../assets/instantquote/interactionflow.png"></div>
-				</div>
-				<div class="caption">I followed the existing interaction pattern we used on our shipper platform in which a calendar of quotes loads below the form field inputs.</div>
-
-				<div class="text"> 
-					<h2>Visual language</h2>
-					<p>
-						In addition to narrowing down the page layout, I also had to decide whether to style this page more closely to the rest of our marketing pages, which featured bold photography, or use a visual style more similar to our actual shipper platform, which used friendlier illustrations that served more as aids to the user flows:
-					</p>
-				</div>
-
-				<div class="img-block" style="margin: 70px 0px 0px; max-width: 100%; display: grid; grid-template-columns: repeat(2, auto); grid-gap: 70px 70px; justify-content: center;">
-					<div>
-						<p>
-							<b>Direction A</b>
-						</p>
-							<img src="../assets/instantquote/directiona.png" style="filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.22))">
-
-						<p>
-							<ul style="font-size: 14px; line-height: 26px; padding-left: 15px">
-								<li>Uses a small, inline quote module with a big hero image</li>
-								<li>Relies more heavily on photography</li>
-								<li>Strictly abides by Uber branding guidelines</li>
-								<li>Very much looks like a “marketing” page</li>
-							</ul>
-						</p>
-					</div>
-					<div>
-						<p>
-							<b>Direction B</b>
-						</p>
-							<img src="../assets/instantquote/directionb.png" style="filter: drop-shadow(0px 6px 20px rgba(0, 0, 0, 0.22))">
-
-						<p>
-							<ul style="font-size: 14px; line-height: 26px; padding-left: 15px">
-								<li>Uses a bigger quote module that takes center stage</li>
-								<li>Uses illustrations rather than photography for visual aids</li>
-								<li>Utilizes the patterns & styling of shipper platform (the tool that we are getting them to sign up for)</li>
-								<li>Looks less “marketing”-like, more interactive</li>
-							</ul>
-						</p>
-					</div>
-				</div>
-
-				<div class="text">
-					<p>
-						We decided to move forward with direction B, which we thought might stand out against a lot of our competitors’ marketing pages by looking more interactive and less static and information-heavy by having the quote module be front and center and relying less on big hero images.
-					</p>
-					<p>
-						We considered user testing the two directions but decided to go with our gut to save time & resources. (We only had a month of design time!)
-					</p>
-				</div>
-
-				<div class="img-block single-img">
-					<div><img src="../assets/instantquote/visualiterations.png" style="max-height: 70vh; filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.22))"></div>
-				</div>
-				<div class="caption">Rapid explorations on the quote module</div>
-
-				<div class="text"> 
-					<h2>Final deliverables</h2>
-					<p>After a few more rapid iterations on the quote module and some revs with our content designer on the copy & SEO content, we finally landed on a final design for the default state of the quote module. From there, designing the rest of the interaction for showing the quotes was just a matter of repurposing the same flow from our shipper platform.</p>
-				</div>
-
-				<div style="width: 100%; margin: 50px 0; text-align: center;"> 
-					<iframe style="border: 1px solid rgba(0, 0, 0, 0.1); width: 100%; max-width: 1000px; height: 650px; margin: 0 50px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRKrZ8cpybTBui7bthYEpHv%2FInstant-Quote%3Ftype%3Ddesign%26node-id%3D1-498%26t%3D7Ofz4HUJdJsaOaAH-1%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A498%26mode%3Ddesign" allowfullscreen></iframe>
-				</div>
-
-				<div class="text"> 
-					<h2>Results</h2>
-					<p>
-						TBD
-					</p>
-				</div>
-
-				<div id="back-to-projects">
-					<a href="/">← Back to all projects</a>
-				</div>
-
-			</div>
-		</main>
-
-		<footer ng-include="'/footer.html'"></footer>
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
-
-	</body>
+                // Fix fragment links
+                if (decrypted.includes("</body>")) decrypted = decrypted.replace("</body>", anchorfixstr + '</body>');
+                else if (decrypted.includes("</html>")) decrypted = decrypted.replace("</html>", anchorfixstr + '</html>');
+                else decrypted = decrypted + anchorfixstr;
+                
+                contentFrame.srcdoc = decrypted;
+                
+                successEl.style.display = "inline";
+                setTimeout(function() {
+                    dialogWrap.style.display = "none";
+                }, 1000);
+            } catch (e) {
+                invalidPassEl.style.display = "inline";
+                passEl.value = "";
+                submitPass.disabled = false;
+                passEl.disabled = false;
+                console.error(e);
+                return;
+            }
+        }
+        
+        submitPass.onclick = doSubmit;
+        passEl.onkeypress = function(e){
+            if (!e) e = window.event;
+            var keyCode = e.keyCode || e.which;
+            invalidPassEl.style.display = "none";
+            if (keyCode == '13'){
+              // Enter pressed
+              doSubmit();
+              return false;
+            }
+        }
+    })();
+    </script>
+  </body>
 </html>
