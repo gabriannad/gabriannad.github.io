@@ -398,6 +398,7 @@ footer a:hover {
 #footer-icons img, #footer-icons-after img {
 	-webkit-filter: invert(1);
 	filter: invert(1);
+	opacity: 1;
 }
 
 .social-icons img {
@@ -405,6 +406,7 @@ footer a:hover {
 	width: 24px;
 	height: 24px;
 	margin-right: 18px;
+	opacity: .78;
 }
 
 
