@@ -107,6 +107,7 @@
 			    -webkit-transition: opacity .3s;
 			    transition: opacity .3s;
 			    display: flex;
+				flex-direction: column;
 			    align-items: center;
 			    justify-content: center;
 			    text-align: center;
@@ -115,6 +116,17 @@
 			.description:hover {
 				opacity: 1;
 			}
+
+			.passwordProtected {
+				display: flex;
+				align-items: flex-start;
+				font-size: 14px;
+				line-height: 18px;
+				font-family: 'graphik-regular';
+				color: #878787;
+				margin-top: 5px;
+			}
+
 
 			@media only screen and (max-width: 1300px) {
 
@@ -206,7 +218,13 @@
 				<a href="work/instantquote">
 					<div class="project">
 						<div class="thumb"><img src="assets/thumbs/instantquote.png"></div>
-						<div class="description">Uber Freight Instant Quote</div>
+						<div class="description">
+							Uber Freight Instant Quote
+								<div class="passwordProtected"><span style="margin-right: 4px"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="padding-left: 5px"><path d="M11.8922 4.9181V6.38199H12.7176C13.2699 6.38199 13.7176 6.8297 13.7176 7.38199V13.8571C13.7176 14.4094 13.2699 14.8571 12.7176 14.8571H3.28906C2.73678 14.8571 2.28906 14.4094 2.28906 13.8571V7.38199C2.28906 6.8297 2.73678 6.38199 3.28906 6.38199H4.11446V4.9181C4.11446 2.81473 5.83668 1.14282 8.00335 1.14282C10.17 1.14282 11.8922 2.81473 11.8922 4.9181ZM8.00335 2.7608C6.78113 2.7608 5.78113 3.73159 5.78113 4.9181V6.38199H10.2256V4.9181C10.2256 3.73159 9.22557 2.7608 8.00335 2.7608ZM9 10C9 10.3701 8.7989 10.6933 8.5 10.8662V12C8.5 12.2761 8.27614 12.5 8 12.5C7.72386 12.5 7.5 12.2761 7.5 12V10.8662C7.2011 10.6933 7 10.3701 7 10C7 9.44771 7.44772 9 8 9C8.55228 9 9 9.44771 9 10Z" fill="#989898"></path></svg>
+								</span>
+			                    <span>Password protected</span>
+			                </div>
+						</div>
 					</div>
 				</a>
 
