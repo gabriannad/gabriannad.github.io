@@ -81,9 +81,8 @@ body {
 }
 
 a:link, a:visited, a:active {
-	font-family: 'graphik-semibold';
-	text-decoration: none;
-	color: #00A4E2;
+	text-decoration: underline;
+	color: #333;
 }
 
 a:hover {
@@ -340,6 +339,7 @@ q {
 
 #back-to-projects a {
 	color: #999999;
+	font-family: 'graphik-semibold';
 }
 
 footer {
@@ -382,7 +382,6 @@ footer a:hover {
 }
 
 #footer-text a:link, #footer-text a:visited {
-	font-family: 'graphik-semibold';
 	color: inherit;
 }
 
