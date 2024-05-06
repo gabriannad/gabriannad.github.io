@@ -36,6 +36,10 @@
 			    box-sizing: border-box;
 			}
 
+			a:link, a:visited, a:active {
+				text-decoration: none;
+			}
+
 			#about {
 				display: block;
 				float: left;
@@ -72,7 +76,7 @@
 				grid-gap: 20px;
 			}
 
-			#projects-container a:hover{
+			#projects-container a:hover {
 				opacity: 1;
 			}
 
@@ -179,16 +183,27 @@
 
 				#projects-container {
 					padding: 20px;
+					grid-gap: 25px;
 				}
+
+				.passwordProtected {
+  					justify-content: center;
+/*					display: block;
+					line-height: 12px;*/
+				}
+
+/*				.passwordProtected svg {
+					vertical-align: bottom;
+					padding-right: 0px;
+				}*/
 
 				.description {
 					position: relative;
-					padding: 15px 0;
+					padding: 20px 0;
 					display: block;
 					opacity: 1;
-					font-size: 16px;
-					line-height: 25px;
 					font-family: 'graphik-medium';
+					background-color: #FFF;
 					color: #555555;
 				}
 
