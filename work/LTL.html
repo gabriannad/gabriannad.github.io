@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../css/pw-protected-style.css">
     <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon">
     <title>Gabi Dumaguin</title>
@@ -14,163 +15,6 @@
             height: 100%;
             font-family: 'graphik-regular', sans-serif;
         }
-        #dialogText {
-            color: #333;
-            text-align: center;
-            line-height: 24px;
-            font-size: 18px;
-        }
-        #dialogText h1 {
-            font-size: 24px;
-            line-height: 28px;
-            font-family: 'graphik-semibold', sans-serif;
-            font-weight: normal;
-            margin: 10px 0;
-        }
-        
-        #dialogWrap {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: table;
-            background-color: #FFFFFF;
-        }
-        
-        #dialogWrapCell {
-            display: table-cell;
-            text-align: center;
-            vertical-align: middle;
-        }
-        
-        #mainDialog {
-            width: 600px;
-            margin: 5px auto 125px auto;
-            background-color: transparent;
-            overflow: hidden;
-            text-align: center;
-        }
-        #mainDialog > * {
-            padding: 30px 0px;
-        }
-        #passArea {
-            display: flex;
-            flex-direction: row;
-            padding: 0px;
-            background-color: white;
-            border: 2px solid #DDDDDD;
-            border-radius: 8px;
-            width: 300px;
-            margin: 0 auto;
-        }
-        #passArea > * {
-            margin: 5px auto;
-        }
-        #passArea:focus-within {
-            border: 2px solid #333333;
-            border-radius: 8px;
-        }
-        #pass {
-            flex-grow:2;
-            width: 100%;
-            padding: 4px 0px 4px 12px;
-            font-size: 18px;
-            line-height: 32px;
-            font-family: 'graphik-regular', sans-serif;
-            border: none;
-            border-radius: 8px;
-            color: #333;
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-            box-sizing: border-box;         /* Opera/IE 8+ */
-        }
-
-        #pass::placeholder {
-            color: #BBB;
-        }
-
-        #pass:focus {
-            outline: none;
-        }
-
-        #messageWrapper {
-            vertical-align: middle;
-            line-height: 44px;
-            font-size: 16px;
-        }
-        
-        .notifyText {
-            display: none;
-        }
-        
-        #invalidPass {
-            color: #DE0B0B;
-        }
-
-        .error {
-            display: none;
-            color: #DE0B0B;
-        }
-        
-        #success {
-            color: #158803;
-        }
-        
-        #submitPass {
-            width: 50px;
-            border-radius: 8px;
-            background-color: transparent;
-            border: none;
-            font-size: 18px;
-            line-height: 32px;
-            font-family: 'graphik-regular', sans-serif;
-            color: #CCC;
-            cursor: pointer;
-        }
-        
-        #submitPass:hover {
-            color: #333;
-            -webkit-transition: color .3s;
-            transition: color .7s;
-        }
-
-        #submitPass svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        #contentFrame {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #attribution {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.8em;
-            color: #999;
-        }
-        #attribution a {
-            font-family: 'graphik-medium';
-            color: #999;
-        }
-
-        a:link, a:visited {
-            color: #333;
-        }
-
-        a:hover {
-            -webkit-transition: opacity .3s;
-            transition: opacity .3s;
-            opacity: .7;
-        }
     </style>
   </head>
   <body>
@@ -180,7 +24,7 @@
             <div id="mainDialog">
                 <div id="dialogText">
                     <h1>This project is password protected</h1>
-                    Please contact me at <a href="mailto:gabrianna.d@gmail.com">gabrianna.d@gmail.com</a> to request access
+                    Please see my resumé for the password, or contact me at gabrianna.d@gmail.com to request access
                 </div>
                 <div id="passArea">
                     <input id="pass" type="password" name="pass" placeholder="password" autofocus>
